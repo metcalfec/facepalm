@@ -3,6 +3,10 @@ var search = document.getElementById('search');
 var jumbo = document.getElementById('jumbo');
 var timeline = document.getElementById('timeline');
 
+////////////////////////////////////////////////////////////////////////////////
+//Search and View Users
+////////////////////////////////////////////////////////////////////////////////
+
 search.addEventListener('submit', function(event) {
   event.preventDefault();
 
@@ -13,6 +17,7 @@ search.addEventListener('submit', function(event) {
 
   xhr.addEventListener('load', function() {
     clearPage(timeline);
+    clearPage(jumbo);
 
     var responseObject = JSON.parse(xhr.responseText);
     console.log(responseObject);
@@ -40,7 +45,7 @@ search.addEventListener('submit', function(event) {
 
       var userImage = document.createElement('img');
       userImage.className = 'media-object';
-      userImage.setAttribute('src', responseObject.image);
+      userImage.setAttribute('src', responseObject.imageSm);
       userImage.setAttribute('width', '45px');
 
       var mediaBody = document.createElement('div');
@@ -81,6 +86,52 @@ search.addEventListener('submit', function(event) {
       column.appendChild(panel);
       timeline.appendChild(column);
     }
+
+    var column = document.createElement('div');
+    column.className = 'col-md-12'
+
+    var banner = document.createElement('img');
+    banner.className = 'timeline-photo';
+    banner.setAttribute('src', responseObject.banner);
+    banner.setAttribute('width', '100%');
+    banner.setAttribute('height', '315px');
+
+    var panel = document.createElement('div');
+    panel.className = 'panel panel-default'
+
+    var imageLg = document.createElement('img');
+    imageLg.className = 'user-img-lg';
+    imageLg.setAttribute('src', responseObject.imageLg);
+    imageLg.setAttribute('width', '150px');
+
+    var name = document.createElement('h3');
+    name.className = "user-name";
+    name.textContent = responseObject.name;
+
+    var panelBody = document.createElement('div');
+    panelBody.className = 'panel-body';
+
+    var  aboutCol = document.createElement('div');
+    aboutCol.className = 'col-md-4';
+
+    var aboutUl = document.createElement('ul');
+
+    var ListOne = document.createElement('li');
+    ListOne.textContent = responseObject.about[0];
+
+    var ListTwo = document.createElement('li');
+    ListTwo.textContent = responseObject.about[1];
+
+    column.appendChild(banner);
+    aboutUl.appendChild(ListOne);
+    aboutUl.appendChild(ListTwo);
+    aboutCol.appendChild(aboutUl);
+    panelBody.appendChild(aboutCol);
+    panel.appendChild(imageLg);
+    panel.appendChild(name);
+    panel.appendChild(panelBody);
+    column.appendChild(panel);
+    jumbo.appendChild(column);
   });
 });
 
