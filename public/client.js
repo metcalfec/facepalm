@@ -7,7 +7,7 @@ search.addEventListener('submit', function(event) {
   event.preventDefault();
 
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/users/:name');
+  xhr.open('POST', '/users/');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({user: keywords.value}));
 
@@ -15,69 +15,72 @@ search.addEventListener('submit', function(event) {
     clearPage(timeline);
 
     var responseObject = JSON.parse(xhr.responseText);
+    console.log(responseObject);
+    var posts = responseObject.posts;
 
-    var column = document.createElement('div');
-    column.setAttribute('class', 'col-md-6');
+    for (var i = 0; i < posts.length; i++) {
 
-    var panel = document.createElement('div');
-    panel.setAttribute('class', 'panel panel-default buffer');
+      var column = document.createElement('div');
+      column.setAttribute('class', 'col-md-6');
 
-    var panelBody = document.createElement('div');
-    panelBody.setAttribute('class', 'panel-body');
+      var panel = document.createElement('div');
+      panel.setAttribute('class', 'panel panel-default buffer');
 
-    var media = document.createElement('div');
-    media.setAttribute('class', 'media');
+      var panelBody = document.createElement('div');
+      panelBody.setAttribute('class', 'panel-body');
 
-    var mediaLeft = document.createElement('div');
-    mediaLeft.setAttribute('class', 'media');
+      var media = document.createElement('div');
+      media.setAttribute('class', 'media');
 
-    var linkImage = document.createElement('a');
-    linkImage.setAttribute('href', '#');
+      var mediaLeft = document.createElement('div');
+      mediaLeft.setAttribute('class', 'media-left');
 
-    var userImage = document.createElement('img');
-    userImage.className = 'media-object';
-    userImage.setAttribute('src', responseObject.image);
-    userImage.setAttribute('width', '45px');
+      var linkImage = document.createElement('a');
+      linkImage.setAttribute('href', '#');
 
-    var mediaBody = document.createElement('div');
-    mediaBody.setAttribute('class', 'media-body');
+      var userImage = document.createElement('img');
+      userImage.className = 'media-object';
+      userImage.setAttribute('src', responseObject.image);
+      userImage.setAttribute('width', '45px');
 
-    var linkName = document.createElement('a');
-    linkName.setAttribute('href', '#');
+      var mediaBody = document.createElement('div');
+      mediaBody.setAttribute('class', 'media-body');
 
-    var poster = document.createElement('h5');
-    poster.setAttribute('class', 'media-heading');
-    poster.textContent = responseObject.name;
+      var linkName = document.createElement('a');
+      linkName.setAttribute('href', '#');
 
-    var hr = document.createElement('hr');
+      var poster = document.createElement('h5');
+      poster.setAttribute('class', 'media-heading');
+      poster.textContent = responseObject.name;
 
-    var messageBody = document.createElement('p');
-    messageBody.textContent = responseObject.post[0];
+      var hr = document.createElement('hr');
 
-    var panelFooter = document.createElement('div');
-    panelFooter.setAttribute('class', 'panel-footer');
+      var messageBody = document.createElement('p');
+      messageBody.textContent = responseObject.posts[i];
 
-    var palm = document.createElement('a');
-    palm.setAttribute('href', '#');
-    palm.textContent = 'Palm';
+      var panelFooter = document.createElement('div');
+      panelFooter.setAttribute('class', 'panel-footer');
 
+      var palm = document.createElement('a');
+      palm.setAttribute('href', '#');
+      palm.textContent = 'Palm';
 
-    mediaLeft.appendChild(linkName);
-    linkName.appendChild(poster);
-    mediaBody.appendChild(messageBody);
-    linkImage.appendChild(userImage);
-    mediaLeft.appendChild(linkImage);
-    media.appendChild(mediaLeft);
-    panelBody.appendChild(hr);
-    media.appendChild(mediaBody);
-    panelBody.appendChild(media);
-    panelFooter.appendChild(palm);
-    panel.appendChild(panelBody);
-    panel.appendChild(panelFooter);
-    column.appendChild(panel);
-    timeline.appendChild(column);
+      linkName.appendChild(poster);
+      mediaBody.appendChild(linkName);
+      media.appendChild(mediaLeft);
+      media.appendChild(mediaBody);
+      media.appendChild(hr);
+      linkImage.appendChild(userImage);
+      mediaLeft.appendChild(linkImage);
+      media.appendChild(messageBody);
 
-
+      panelBody.appendChild(media);
+      panel.appendChild(panelBody);
+      panelFooter.appendChild(palm);
+      panel.appendChild(panelFooter);
+      column.appendChild(panel);
+      timeline.appendChild(column);
+    }
   });
 });
 
@@ -89,8 +92,3 @@ function clearPage(parent) {
     }
   }
 }
-
-
-function showTimeline(post) {
-
-};
