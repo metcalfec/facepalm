@@ -6,17 +6,28 @@ var users = require('./users.js')
 
 app.use(express.static('./public/'));
 
-app.post('/users/:name', jsonParser, function(req, res) {
+app.post('/users/', jsonParser, function(req, res) {
+  var matched = [];
+
   for (var i = 0; i < users.length; i++) {
     if (users[i].name == req.body.user) {
       console.log(req.body)
-      res.send(users[i]);
+      matched.push(users[i]);
     }
-    // else {
-    //   res.send('No Matches')
-    // }
+  }
+  if (matched.length > 0) {
+    console.log(matched);
+    res.json(matched[0]);
   }
 });
+
+
+
+
+
+
+
+
 
 app.listen(8080, function() {
   console.log('Listening on 8080');
