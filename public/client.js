@@ -6,6 +6,7 @@ var page = document.getElementsByClassName('clicks');
 var friends = document.getElementById('friends');
 var currentUser = document.getElementById('current-user');
 
+
 function clearPage(parent) {
   if (parent) {
     parent.className = "";
@@ -22,7 +23,7 @@ currentUser.addEventListener('click', function(event) {
   var clickText = theClick.textContent;
   console.log(clickText);
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/profile/');
+  xhr.open('POST', '/current_user/');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({profile: clickText}));
 
@@ -32,6 +33,33 @@ currentUser.addEventListener('click', function(event) {
 
   });
 });
+
+jumbo.addEventListener('click', function(event) {
+
+  var click = event.target;
+  console.log(click);
+  var buttonId = click.getAttribute('data-id');
+  console.log(buttonId);
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/add_friend/');
+  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.send(JSON.stringify({button: buttonId}));
+
+  xhr.addEventListener('load', function() {
+    var responseObject = JSON.parse(xhr.responseText);
+    console.log(responseObject);
+    clearPage(friends);
+    friends.className = 'col-md-3 buffer';
+    for (var i =0; i < responseObject.length; i++) {
+      showFriends(responseObject[i]);
+    }
+    var unfriend = document.getElementsByTagName('button');
+    unfriend[1].textContent = 'Unfriend';
+    unfriend[1].className = 'btn btn-success';
+
+  });
+});
+
 
 ////////////////////////////////////////////////////////////////////////////////
 //Search and View Users
@@ -156,11 +184,23 @@ search.addEventListener('submit', function(event) {
     var ListTwo = document.createElement('li');
     ListTwo.textContent = responseObject.about[1];
 
+    var addCol = document.createElement('div');
+    addCol.className = 'col-md-2 col-md-offset-6'
+
+    var add = document.createElement('button');
+    add.setAttribute('type', 'button');
+    add.setAttribute('id', 'add-friend');
+    add.setAttribute('data-id', responseObject.id)
+    add.setAttribute('class', 'btn btn-primary');
+    add.textContent = 'Add Friend';
+
     column.appendChild(banner);
     aboutUl.appendChild(ListOne);
     aboutUl.appendChild(ListTwo);
     aboutCol.appendChild(aboutUl);
     panelBody.appendChild(aboutCol);
+    addCol.appendChild(add);
+    panelBody.appendChild(addCol);
     panel.appendChild(imageLg);
     panel.appendChild(name);
     panel.appendChild(panelBody);
