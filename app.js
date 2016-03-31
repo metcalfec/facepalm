@@ -6,28 +6,53 @@ var users = require('./users.js')
 
 app.use(express.static('./public/'));
 
-app.post('/users/', jsonParser, function(req, res) {
+app.post('/current_user/', jsonParser, function(req, res) {
+
+  console.log(req.body.profile)
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].name == req.body.profile) {
+      console.log('hi');
+    }
+  }
+})
+
+app.post('/profile/', jsonParser, function(req, res) {
+
+  console.log(req.body.profile)
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].name == req.body.profile) {
+      console.log('hi');
+    }
+  }
+})
+
+app.post('/add_friend/', jsonParser, function(req, res) {
+  console.log(users[2]);
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].id == req.body.button) {
+      var friendToAdd = {
+        name: users[i].name,
+        image: users[i].image
+      };
+      users[2].friends.push(friendToAdd);
+      res.json(users[2].friends);
+
+    }
+  }
+})
+
+app.post('/search/', jsonParser, function(req, res) {
   var matched = [];
 
   for (var i = 0; i < users.length; i++) {
-    if (users[i].name == req.body.user) {
-      console.log(req.body)
+    if (users[i].name == req.body.search) {
       matched.push(users[i]);
     }
   }
   if (matched.length > 0) {
-    console.log(matched);
     res.json(matched[0]);
   }
 });
-
-
-
-
-
-
-
-
 
 app.listen(8080, function() {
   console.log('Listening on 8080');
