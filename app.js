@@ -21,25 +21,38 @@ app.post('/profile/', jsonParser, function(req, res) {
   console.log(req.body.profile)
   for (var i = 0; i < users.length; i++) {
     if (users[i].name == req.body.profile) {
-      console.log('hi');
+      console.log('test');
     }
   }
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
-  console.log(users[2]);
+
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
       var friendToAdd = {
         name: users[i].name,
         image: users[i].image
       };
-      users[2].friends.push(friendToAdd);
-      res.json(users[2].friends);
-
+      console.log(friendToAdd);
+      console.log(checkArray(friendToAdd, users[i].friends));
+      if(checkArray(friendToAdd, users[i].friends) !== true) {
+        users[2].friends.push(friendToAdd);
+        res.json(users[2].friends);
+        console.log(users[2])
+      }
     }
   }
 })
+
+function checkArray(object, array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === object) {
+      return true;
+    }
+  }
+    return false;
+};
 
 app.post('/search/', jsonParser, function(req, res) {
   var matched = [];
