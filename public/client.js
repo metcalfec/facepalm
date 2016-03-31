@@ -6,6 +6,9 @@ var page = document.getElementsByClassName('clicks');
 var friends = document.getElementById('friends');
 var currentUser = document.getElementById('current-user');
 
+var activeUser = {
+  name: 'Rick Sunderland'
+}
 
 function clearPage(parent) {
   if (parent) {
@@ -21,7 +24,6 @@ currentUser.addEventListener('click', function(event) {
 
   var theClick = event.target;
   var clickText = theClick.textContent;
-  console.log(clickText);
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/current_user/');
   xhr.setRequestHeader('Content-type', 'application/json');
@@ -37,13 +39,11 @@ currentUser.addEventListener('click', function(event) {
 jumbo.addEventListener('click', function(event) {
 
   var click = event.target;
-  console.log(click);
   var buttonId = click.getAttribute('data-id');
-  console.log(buttonId);
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/add_friend/');
   xhr.setRequestHeader('Content-type', 'application/json');
-  xhr.send(JSON.stringify({button: buttonId}));
+  xhr.send(JSON.stringify({button: buttonId, active: activeUser}));
 
   xhr.addEventListener('load', function() {
     var responseObject = JSON.parse(xhr.responseText);
@@ -51,11 +51,24 @@ jumbo.addEventListener('click', function(event) {
     clearPage(friends);
     friends.className = 'col-md-3 buffer';
     for (var i =0; i < responseObject.length; i++) {
-      showFriends(responseObject[i]);
+
+      var friendThumbnail = document.createElement('img');
+      friendThumbnail.setAttribute('src', responseObject[i].image)
+      friendThumbnail.setAttribute('class', 'img-thumbnail');
+      friendThumbnail.setAttribute('width', '84px');
+
+      friends.appendChild(friendThumbnail);
     }
     var unfriend = document.getElementsByTagName('button');
-    unfriend[1].textContent = 'Unfriend';
-    unfriend[1].className = 'btn btn-success';
+    if (unfriend[1].textContent === 'Add Friend') {
+      unfriend[1].textContent = 'Kill Friend';
+      unfriend[1].className = 'btn btn-danger';
+    }
+    else {
+      unfriend[1].textContent = 'Add Friend';
+      unfriend[1].className = 'btn btn-primary';
+    }
+
 
   });
 });
@@ -78,7 +91,6 @@ search.addEventListener('submit', function(event) {
     clearPage(jumbo);
 
     var responseObject = JSON.parse(xhr.responseText);
-    console.log(responseObject);
     var posts = responseObject.posts;
     var userFriends = responseObject.friends;
     console.log(userFriends);
@@ -187,25 +199,45 @@ search.addEventListener('submit', function(event) {
     var addCol = document.createElement('div');
     addCol.className = 'col-md-2 col-md-offset-6'
 
-    var add = document.createElement('button');
-    add.setAttribute('type', 'button');
-    add.setAttribute('id', 'add-friend');
-    add.setAttribute('data-id', responseObject.id)
-    add.setAttribute('class', 'btn btn-primary');
-    add.textContent = 'Add Friend';
-
     column.appendChild(banner);
     aboutUl.appendChild(ListOne);
     aboutUl.appendChild(ListTwo);
     aboutCol.appendChild(aboutUl);
     panelBody.appendChild(aboutCol);
-    addCol.appendChild(add);
+
     panelBody.appendChild(addCol);
     panel.appendChild(imageLg);
     panel.appendChild(name);
     panel.appendChild(panelBody);
     column.appendChild(panel);
     jumbo.appendChild(column);
+
+    var myFriend = false;
+
+    if (responseObject.name !== activeUser.name) {
+
+      var add = document.createElement('button');
+      add.setAttribute('type', 'button');
+      add.setAttribute('id', 'add-friend');
+      add.setAttribute('data-id', responseObject.id)
+      add.setAttribute('class', 'btn btn-primary');
+
+
+      for (var i = 0; i < responseObject.friends.length; i++) {
+        if (responseObject.friends[i].name === activeUser.name) {
+          myFriend = true;
+        }
+      }
+      if (myFriend) {
+        add.textContent = 'Kill Friend';
+        add.setAttribute ('class', 'btn btn-danger')
+      }
+      else {
+        add.textContent = 'Add Friend';
+      }
+
+      addCol.appendChild(add);
+    }
   });
 });
 
