@@ -114,6 +114,8 @@ search.addEventListener('submit', function(event) {
       panel.appendChild(panelFooter);
       timeline.appendChild(panel);
     }
+    clearPage(friends);
+    friends.className = 'col-md-3 buffer';
 
     for (var i = 0; i < userFriends.length; i++) {
       showFriends(userFriends[i])
