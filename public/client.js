@@ -40,10 +40,11 @@ jumbo.addEventListener('click', function(event) {
 
   var click = event.target;
   var buttonId = click.getAttribute('data-id');
+  var buttonText = click.textContent;
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/add_friend/');
   xhr.setRequestHeader('Content-type', 'application/json');
-  xhr.send(JSON.stringify({button: buttonId, active: activeUser}));
+  xhr.send(JSON.stringify({button: buttonId, active: activeUser, text: buttonText}));
 
   xhr.addEventListener('load', function() {
     var responseObject = JSON.parse(xhr.responseText);
@@ -93,7 +94,6 @@ search.addEventListener('submit', function(event) {
     var responseObject = JSON.parse(xhr.responseText);
     var posts = responseObject.posts;
     var userFriends = responseObject.friends;
-    console.log(userFriends);
 
     for (var i = 0; i < posts.length; i++) {
 
