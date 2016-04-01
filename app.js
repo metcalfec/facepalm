@@ -27,32 +27,28 @@ app.post('/profile/', jsonParser, function(req, res) {
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
-
+  console.log(req.body.button);
+  console.log(req.body.text);
+  var activeUser = req.body.active;
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
       var friendToAdd = {
         name: users[i].name,
         image: users[i].image
       };
-      console.log(friendToAdd);
-      console.log(checkArray(friendToAdd, users[i].friends));
-      if(checkArray(friendToAdd, users[i].friends) !== true) {
-        users[2].friends.push(friendToAdd);
-        res.json(users[2].friends);
-        console.log(users[2])
-      }
     }
   }
-})
-
-function checkArray(object, array) {
-  for (var i = 0; i < array.length; i++) {
-    if (array[i] === object) {
-      return true;
+  for (var j = 0; j < users.length; j++) {
+    if (users[j].name === activeUser.name && req.body.text === 'Add Friend') {
+      users[j].friends.push(friendToAdd);
+      res.json(users[j].friends);
+    }
+    else if (users[j].name === activeUser.name && req.body.text !== 'Add Friend') {
+      users[j].friends.pop(friendToAdd);
+      res.json(users[j].friends);
     }
   }
-    return false;
-};
+});
 
 app.post('/search/', jsonParser, function(req, res) {
   var matched = [];
@@ -64,6 +60,9 @@ app.post('/search/', jsonParser, function(req, res) {
   }
   if (matched.length > 0) {
     res.json(matched[0]);
+  }
+  else {
+    console.log('nope');
   }
 });
 
