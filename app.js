@@ -27,27 +27,51 @@ app.post('/profile/', jsonParser, function(req, res) {
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
-  console.log(req.body.button);
-  console.log(req.body.text);
-  var activeUser = req.body.active;
+  //Checks who active user is
+  var yourFriends =[];
+  // console.log(yourFriends);
+  for (var i = 0; i < users.length; i++){
+    if (users[i].name === req.body.active.name) {
+      var activeUser = users[i];  //Rick Sunderland
+      // console.log(activeUser);
+    }
+  }
+  //Checks which users you want to add/delete
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
-      var friendToAdd = {
+      var userInQuestion = {
         name: users[i].name,
-        image: users[i].image
+        image: users[i].image   //Lloyd Bonafide
       };
     }
   }
-  for (var j = 0; j < users.length; j++) {
-    if (users[j].name === activeUser.name && req.body.text === 'Add Friend') {
-      users[j].friends.push(friendToAdd);
-      res.json(users[j].friends);
-    }
-    else if (users[j].name === activeUser.name && req.body.text !== 'Add Friend') {
-      users[j].friends.pop(friendToAdd);
-      res.json(users[j].friends);
-    }
-  }
+  console.log(userInQuestion);
+  console.log(activeUser.friends)
+
+  isFriend(activeUser.friends, userInQuestion);
+
+  //Checks if that user is already in your friends
+  //     var friendsArray = users[i].friends   //Lloyd
+  //     console.log(theFriend.friends); //Lloyd's friends
+  //     for (var x = 0; x < friendsArray.length; x++) {
+  //       if (users[x].name !== rick.name) {
+      //     yourFriends.push(users[i]);
+      //     console.log(yourFriends)
+      //   }
+      // }
+  //   }
+  // }
+
+  // for (var j = 0; j < users.length; j++) {
+  //
+  //     // users[j].friends.push(friendToAdd);
+  //     // res.json(users[j].friends);
+  //   }
+  //   // else if (users[j].name === activeUser.name && req.body.text !== 'Add Friend') {
+  //   //   users[j].friends.pop(friendToAdd);
+  //   //   // res.json(users[j].friends);
+  //   // }
+  // }
 });
 
 app.post('/search/', jsonParser, function(req, res) {
@@ -69,3 +93,15 @@ app.post('/search/', jsonParser, function(req, res) {
 app.listen(8080, function() {
   console.log('Listening on 8080');
 })
+
+
+function isFriend(friends, friend) {
+  // console.log(friends.indexOf(friend));
+  if (friends.indexOf(friend) === -1) {
+    friends.push(friend);
+    // console.log('Not there, ADDED! ' + friends.indexOf(friend));
+  }
+  else if (friends.indexOf(friend) > -1) {
+    // console.log('Already a friend.' + friends.indexOf(friend));
+  }
+}
