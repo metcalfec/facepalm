@@ -27,41 +27,35 @@ app.post('/profile/', jsonParser, function(req, res) {
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
-
-  //Checks who active user is
-
+//The active user
   for (var i = 0; i < users.length; i++){
     if (users[i].name === req.body.active.name) {
-      var theFriend =  users[i];
-      var theFriends = users[i].friends;
+      var userFriends = users[i].friends;
     }
   }
-  // console.log(theFriends.name)
-
-  //Checks which users you want to add/delete
-
+//The friend in question
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
-      var friend = {
+      var friendInQuestion = {
         name: users[i].name,
         image: users[i].image
       };
     }
   }
-  console.log(theFriends)
+//Add or remove friends
   if (req.body.text === 'Kill Friend') {
-    for (var i = 0; i < theFriends.length; i++) {
-      if (theFriends[i].name === friend.name) {
-        theFriends.splice(theFriends[i], 1);
+    for (var i = 0; i < userFriends.length; i++) {
+      if (userFriends[i].name === friendInQuestion.name) {
+        console.log(userFriends[i]);
+        userFriends.splice(i, 1);
       }
     }
-    res.json(theFriends);
+    res.json(userFriends);
   }
   if (req.body.text === 'Add Friend') {
-    theFriends.push(friend);
-    res.json(theFriends);
+    userFriends.push(friendInQuestion);
+    res.json(userFriends);
   }
-
 });
 
 app.post('/search/', jsonParser, function(req, res) {
