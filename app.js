@@ -4,35 +4,34 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 var users = require('./users.js')
 
+var activeUser = users[2];
+
 app.use(express.static('./public/'));
 
-app.post('/current_user/', jsonParser, function(req, res) {
 
-  console.log(req.body.profile)
+app.post('/timeline/', jsonParser, function(req, res) {
+  var theID = req.body.click;
   for (var i = 0; i < users.length; i++) {
-    if (users[i].name == req.body.profile) {
-      console.log('hi');
-    }
-  }
-})
+    for (var x = 0; x < users[i].posts.length; x++) {
+      // console.log(users[i].posts[x].postID)
+      if (parseInt(theID) === users[i].posts[x].postID) {
+        users[i].posts[x].userLiked.push(activeUser);
+        var likes = users[i].posts[x].userLiked.length
+        users[i].posts[x].likes = likes
+        console.log(users[i].posts[x]);
+      }
 
-app.post('/profile/', jsonParser, function(req, res) {
-
-  console.log(req.body.profile)
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].name == req.body.profile) {
-      console.log('test');
     }
   }
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
 //The active user
-  for (var i = 0; i < users.length; i++){
-    if (users[i].name === req.body.active.name) {
-      var userFriends = users[i].friends;
-    }
+for (var i = 0; i < users.length; i++){
+  if (users[i].name === req.body.active.name) {
+    var userFriends = users[i].friends;
   }
+}
 //The friend in question
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
@@ -66,6 +65,7 @@ app.post('/search/', jsonParser, function(req, res) {
       matched.push(users[i]);
     }
   }
+
   if (matched.length > 0) {
     res.json(matched[0]);
   }
@@ -77,17 +77,3 @@ app.post('/search/', jsonParser, function(req, res) {
 app.listen(8080, function() {
   console.log('Listening on 8080');
 })
-
-
-// function isFriend(friends, friend) {
-//   if (friends[i].indexOf(friend) === -1) {
-//     friends.push(friend);
-//     console.log(friends.indexOf(friend));
-//     // console.log('Not there, ADDED! ' + friends.indexOf(friend));
-//     }
-//
-//     else if (friends.indexOf(friend) > -1) {
-//       // console.log('Already a friend.' + friends.indexOf(friend));
-//     }
-//   }
-// }
