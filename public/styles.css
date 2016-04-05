@@ -42,3 +42,14 @@
 .buffer {
   margin-top: 50px;
 }
+
+.palm-count {
+  display: inline-block;
+  color: blue;
+  padding-left: 10px;
+}
+
+.palm-contributor {
+  display: inline-block;
+  padding-left: 10px;
+}
