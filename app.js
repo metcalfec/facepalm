@@ -27,33 +27,37 @@ app.post('/timeline/', jsonParser, function(req, res) {
 
 app.post('/add_friend/', jsonParser, function(req, res) {
   //The active user
-  for (var i = 0; i < users.length; i++){
-    if (users[i].name === req.body.active.name) {
-      var userFriends = users[i].friends;
-    }
-  }
+  var theUser = {
+    name: activeUser.name,
+    image: activeUser.image
+  };
   //The friend in question
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
-      var friendInQuestion = {
+      var friendInQuestion = users[i];
+      var friend = {
         name: users[i].name,
         image: users[i].image
-      };
-    }
-  }
-  //Add or remove friends
-  if (req.body.text === 'Kill Friend') {
-    for (var i = 0; i < userFriends.length; i++) {
-      if (userFriends[i].name === friendInQuestion.name) {
-        console.log(userFriends[i]);
-        userFriends.splice(i, 1);
       }
     }
-    res.json(userFriends);
+  }
+  if (req.body.text === 'Kill Friend') {
+    for (var i = 0; i < friendInQuestion.friends.length; i++) {
+      if (friendInQuestion.friends[i].name === activeUser.name) {
+        friendInQuestion.friends.splice(i, 1);
+      }
+    }
+    for (var i = 0; i < activeUser.friends.length; i++) {
+      if (activeUser.friends[i].name === friend.name) {
+        activeUser.friends.splice(i, 1);
+      }
+    }
+    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends});
   }
   if (req.body.text === 'Add Friend') {
-    userFriends.push(friendInQuestion);
-    res.json(userFriends);
+    friendInQuestion.friends.push(theUser);
+    activeUser.friends.push(friend);
+    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends});
   }
 });
 
@@ -65,7 +69,6 @@ app.post('/search/', jsonParser, function(req, res) {
       matched.push(users[i]);
     }
   }
-
   if (matched.length > 0) {
     res.json({matched: matched[0], active: users[2]});
   }
