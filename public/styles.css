@@ -43,6 +43,10 @@
   margin-top: 50px;
 }
 
+.buffer-sm {
+  margin-top: 20px;
+}
+
 .palm-count {
   display: inline-block;
   color: blue;
@@ -57,4 +61,20 @@
 .no-results {
   margin-top: 100px;
   font-size: 20px
+}
+
+.add-remove {
+  margin-top: -133px;
+}
+
+.footer-sm {
+  height: 15px;
+}
+
+.jumbo-label-buffer {
+  margin-top: -10px;
+}
+
+.jumbo-about-buffer {
+  margin-left: -70px;
 }
