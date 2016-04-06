@@ -21,7 +21,17 @@ var users = [
       }
     ],
     friendsCount: 3,
-    photos: 3,
+    photos: [
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg'
+    ],
     image: 'images/Ted-Bell-profile.jpg',
     banner: 'images/Ted-Bell-jumbo.jpg',
     posts: [
@@ -97,7 +107,17 @@ var users = [
       }
     ],
     friendsCount: 3,
-    photos: 3,
+    photos: [
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg'
+    ],
     image: 'images/Lloyd-Bonafide-profile.jpg',
     banner: 'images/Lloyd-Bonafide-jumbo.jpg',
     posts: [
@@ -173,7 +193,17 @@ var users = [
       }
     ],
     friendsCount: 3,
-    photos: 3,
+    photos: [
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg'
+    ],
     image: 'images/Rick-Sunderland-profile.jpg',
     banner: 'images/Rick-Sunderland-jumbo.jpg',
     posts: [
@@ -253,7 +283,17 @@ var users = [
       }
     ],
     friendsCount: 4,
-    photos: 3,
+    photos: [
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg'
+    ],
     image: 'images/Art-Griego-profile.jpg',
     banner: 'images/Art-Griego-jumbo.jpg',
     posts: [
@@ -329,7 +369,17 @@ var users = [
       }
     ],
     friendsCount: 3,
-    photos: 3,
+    photos: [
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg',
+      'images/placeholder_user.svg'
+    ],
     image: 'images/Jay-Santos-profile.jpg',
     banner: 'images/Jay-Santos-jumbo.jpg',
     posts: [
