@@ -10,14 +10,17 @@ var users = [
       {
         name: 'Art Griego',
         image: 'images/Art-Griego-profile.jpg',
+        id: 4
       },
       {
         name: 'Lloyd Bonafide',
-        image: 'images/Lloyd-Bonafide-profile.jpg'
+        image: 'images/Lloyd-Bonafide-profile.jpg',
+        id: 2
       },
       {
         name: 'Rick Sunderland',
-        image: 'images/Rick-Sunderland-profile.jpg'
+        image: 'images/Rick-Sunderland-profile.jpg',
+        id: 3
       }
     ],
     friendsCount: 3,
@@ -93,15 +96,18 @@ var users = [
     friends: [
       {
         name: 'Art Griego',
-        image: 'images/Art-Griego-profile.jpg'
+        image: 'images/Art-Griego-profile.jpg',
+        id: 4
       },
       {
         name: 'Jay Santos',
-        image: 'images/Jay-Santos-profile.jpg'
+        image: 'images/Jay-Santos-profile.jpg',
+        id: 5
       },
       {
         name: 'Ted Bell',
-        image: 'images/Ted-Bell-profile.jpg'
+        image: 'images/Ted-Bell-profile.jpg',
+        id: 1
       }
     ],
     friendsCount: 3,
@@ -177,15 +183,18 @@ var users = [
     friends: [
       {
         name: 'Ted Bell',
-        image: 'images/Ted-Bell-profile.jpg'
+        image: 'images/Ted-Bell-profile.jpg',
+        id: 1
       },
       {
         name: 'Jay Santos',
-        image: 'images/Jay-Santos-profile.jpg'
+        image: 'images/Jay-Santos-profile.jpg',
+        id: 5
       },
       {
         name: 'Art Griego',
-        image: 'images/Art-Griego-profile.jpg'
+        image: 'images/Art-Griego-profile.jpg',
+        id: 4
       }
     ],
     friendsCount: 3,
@@ -261,19 +270,23 @@ var users = [
     friends: [
       {
         name: 'Ted Bell',
-        image: 'images/Ted-Bell-profile.jpg'
+        image: 'images/Ted-Bell-profile.jpg',
+        id: 1
       },
       {
         name: 'Lloyd Bonafide',
-        image: 'images/Lloyd-Bonafide-profile.jpg'
+        image: 'images/Lloyd-Bonafide-profile.jpg',
+        id: 2
       },
       {
         name: 'Rick Sunderland',
-        image: 'images/Rick-Sunderland-profile.jpg'
+        image: 'images/Rick-Sunderland-profile.jpg',
+        id: 3
       },
       {
         name: 'Jay Santos',
-        image: 'images/Jay-Santos-profile.jpg'
+        image: 'images/Jay-Santos-profile.jpg',
+        id: 5
       }
     ],
     friendsCount: 4,
@@ -349,15 +362,18 @@ var users = [
     friends: [
       {
         name: 'Lloyd Bonafide',
-        image: 'images/Lloyd-Bonafide-profile.jpg'
+        image: 'images/Lloyd-Bonafide-profile.jpg',
+        id: 2
       },
       {
         name: 'Rick Sunderland',
-        image: 'images/Rick-Sunderland-profile.jpg'
+        image: 'images/Rick-Sunderland-profile.jpg',
+        id: 3
       },
       {
         name: 'Art Griego',
-        image: 'images/Art-Griego-profile.jpg'
+        image: 'images/Art-Griego-profile.jpg',
+        id: 4
       }
     ],
     friendsCount: 3,

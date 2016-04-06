@@ -15,7 +15,8 @@ app.post('/timeline/', jsonParser, function(req, res) {
   var theText = req.body.text;
   var theUser = {
     name: activeUser.name,
-    image: activeUser.image
+    image: activeUser.image,
+    id: activeUser.id
   };
   console.log(theText)
   if (theText === 'Palm') {
@@ -46,12 +47,24 @@ app.post('/timeline/', jsonParser, function(req, res) {
   }
 })
 
-app.post('/add_friend/', jsonParser, function(req, res) {
+app.post('/view-friend/', jsonParser, function(req, res) {
+  var matched = [];
+  for (var i = 0; i< users.length; i++) {
+    if (req.body.friend == users[i].id ) {
+      matched.push(users[i]);
+    }
+  }
+  console.log(matched[0]);
+  res.json({matched: matched[0], active: activeUser});
+});
+
+app.post('/add-friend/', jsonParser, function(req, res) {
   //The active user
 
   var theUser = {
     name: activeUser.name,
-    image: activeUser.image
+    image: activeUser.image,
+    id: activeUser.id
   };
   //The friend in question
   for (var i = 0; i < users.length; i++) {
@@ -59,7 +72,8 @@ app.post('/add_friend/', jsonParser, function(req, res) {
       var friendInQuestion = users[i];
       var friend = {
         name: users[i].name,
-        image: users[i].image
+        image: users[i].image,
+        id: users[i].id
       }
     }
   }
@@ -99,7 +113,7 @@ app.post('/search/', jsonParser, function(req, res) {
     }
   }
   if (matched.length > 0) {
-    res.json({matched: matched[0], active: users[2], locate: true});
+    res.json({matched: matched[0], active: activeUser, locate: true});
   }
   else {
     res.json({locate: false, search: req.body.search});

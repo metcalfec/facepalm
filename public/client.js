@@ -44,6 +44,37 @@ timeline.addEventListener('click', function(event) {
   });
 });
 
+//////////
+friends.addEventListener('click', function(event) {
+  event.preventDefault();
+  var click = event.target;
+  var friendID = click.getAttribute('data-id');
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/view-friend/');
+  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.send(JSON.stringify({friend: friendID}));
+
+  xhr.addEventListener('load', function() {
+    clearPage(timeline);
+    clearPage(jumbo);
+    clearPage(friends);
+    var responseObject = JSON.parse(xhr.responseText);
+    var theTimeline = responseObject.matched.posts;
+    var active = responseObject.active;
+    var activeFriends = responseObject.active.friends;
+    var matched = responseObject.matched;
+    var matchedFriends = responseObject.matched.friends;
+
+    timeline.className = 'col-md-9';
+    showPosts(theTimeline);
+
+
+    friends.className = 'col-md-3 buffer';
+    showFriends(matchedFriends);
+    showJumbo(matched, active);
+  });
+});
+
 ////////////////////////////////////////////////////////////////////////////////
 //Jumbo Event Delegation
 ////////////////////////////////////////////////////////////////////////////////
@@ -54,12 +85,13 @@ jumbo.addEventListener('click', function(event) {
   var buttonId = click.getAttribute('data-id');
   var buttonText = click.textContent;
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/add_friend/');
+  xhr.open('POST', '/add-friend/');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({button: buttonId, text: buttonText}));
 
   xhr.addEventListener('load', function() {
     var responseObject = JSON.parse(xhr.responseText);
+    console.log(responseObject)
     var unfriend = document.getElementsByTagName('button');
     if (responseObject.targetClick === 'Photos') {
       clearPage(friends);
@@ -271,6 +303,7 @@ function showFriends(friend) {
     var friendThumbnail = document.createElement('img');
     friendThumbnail.setAttribute('src', friend[i].image);
     friendThumbnail.setAttribute('alt', friend[i].name);
+    friendThumbnail.setAttribute('data-id', friend[i].id);
     friendThumbnail.setAttribute('class', 'img-thumbnail');
     friendThumbnail.setAttribute('width', '84px');
 
