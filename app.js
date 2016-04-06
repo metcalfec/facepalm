@@ -13,16 +13,37 @@ app.use(express.static('./public/'));
 app.post('/timeline/', jsonParser, function(req, res) {
   var theID = req.body.click;
   var theText = req.body.text;
+  var theUser = {
+    name: activeUser.name,
+    image: activeUser.image
+  };
+  console.log(theText)
+  if (theText === 'Palm') {
     for (var i = 0; i < users.length; i++) {
       for (var x = 0; x < users[i].posts.length; x++) {
         if (parseInt(theID) === users[i].posts[x].postID) {
-          users[i].posts[x].userLiked.push(activeUser.image);
-          var likes = users[i].posts[x].userLiked.length
-          users[i].posts[x].likes = likes
+          users[i].posts[x].userLiked.push(theUser);
+          var likes = users[i].posts[x].userLiked.length;
+          var userLiked = users[i].posts[x].userLiked;
         }
-        res.json(users[i].posts[x]);
       }
     }
+    res.json({likes: likes, userLiked: userLiked})
+    console.log({likes: likes, userLiked: userLiked});
+  }
+  else {
+    for (var i = 0; i < users.length; i++) {
+      for (var x = 0; x < users[i].posts.length; x++) {
+        if (parseInt(theID) === users[i].posts[x].postID) {
+          users[i].posts[x].userLiked.pop(theUser);
+          var likes = users[i].posts[x].userLiked.length;
+          var userLiked = users[i].posts[x].userLiked;
+        }
+      }
+    }
+    res.json({likes: likes, userLiked: userLiked})
+    console.log({likes: likes, userLiked: userLiked});
+  }
 })
 
 app.post('/add_friend/', jsonParser, function(req, res) {
