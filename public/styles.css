@@ -78,3 +78,12 @@
 .jumbo-about-buffer {
   margin-left: -70px;
 }
+
+.photo-thumbs {
+  float: left;
+  clear: both;
+}
+
+.title-photo {
+  font-size: 50px;
+}

@@ -48,10 +48,7 @@ app.post('/timeline/', jsonParser, function(req, res) {
 
 app.post('/add_friend/', jsonParser, function(req, res) {
   //The active user
-  console.log(req.body.text)
-  if (req.body.text === 'Photos') {
-    res.json({targetClick: 'Photos'});
-  }
+
   var theUser = {
     name: activeUser.name,
     image: activeUser.image
@@ -66,7 +63,14 @@ app.post('/add_friend/', jsonParser, function(req, res) {
       }
     }
   }
-  if (req.body.text === 'Kill Friend') {
+
+  if (req.body.text === 'Photos') {
+    for (var i = 0; i < users.length; i++) {
+      var friendPhotos = users[i].photos
+    }
+    res.json({targetClick: 'Photos', photos: friendPhotos, friends: false});
+  }
+  else if (req.body.text === 'Kill Friend') {
     for (var i = 0; i < friendInQuestion.friends.length; i++) {
       if (friendInQuestion.friends[i].name === activeUser.name) {
         friendInQuestion.friends.splice(i, 1);
@@ -79,7 +83,7 @@ app.post('/add_friend/', jsonParser, function(req, res) {
     }
     res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends, friends: true});
   }
-  if (req.body.text === 'Add Friend') {
+  else if (req.body.text === 'Add Friend') {
     friendInQuestion.friends.push(theUser);
     activeUser.friends.push(friend);
     res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends, friends: true});

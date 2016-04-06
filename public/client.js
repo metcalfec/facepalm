@@ -37,8 +37,6 @@ timeline.addEventListener('click', function(event) {
     var responseObject = JSON.parse(xhr.responseText);
     var userLiked = responseObject.userLiked;
     console.log(userLiked)
-    // var theLike = event.target.parentNode
-    // var responseObject = JSON.parse(xhr.responseText);
     console.log(responseObject);
     getPalmed(theClick, userLiked);
 
@@ -62,12 +60,19 @@ jumbo.addEventListener('click', function(event) {
 
   xhr.addEventListener('load', function() {
     var responseObject = JSON.parse(xhr.responseText);
-    console.log(responseObject.targetClick);
-
+    var unfriend = document.getElementsByTagName('button');
     if (responseObject.targetClick === 'Photos') {
       clearPage(friends);
-      clearPage(jumbo);
       clearPage(timeline);
+      timeline.className = 'col-md-10 col-md-offset-1';
+      var title = document.createElement('h1');
+      title.textContent = 'Photos';
+      title.className = 'title-photo';
+      var hr = document.createElement('hr');
+      timeline.appendChild(title);
+      timeline.appendChild(hr);
+      unfriend[1].className = 'hide';
+      showPhotos(responseObject.photos);
     }
     if (responseObject.friends === true) {
       clearPage(friends);
@@ -75,7 +80,6 @@ jumbo.addEventListener('click', function(event) {
 
       showFriends(responseObject.targetFriends);
 
-      var unfriend = document.getElementsByTagName('button');
       if (unfriend[1].textContent === 'Add Friend') {
         unfriend[1].textContent = 'Kill Friend';
         unfriend[1].className = 'btn btn-danger add-remove';
@@ -127,7 +131,7 @@ search.addEventListener('submit', function(event) {
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
 
-      timeline.className = 'col-md-6';
+      timeline.className = 'col-md-9';
       showPosts(theTimeline);
 
 
@@ -272,6 +276,21 @@ function showFriends(friend) {
 
     friends.appendChild(friendThumbnail);
   }
+}
+
+function showPhotos(photo) {
+  for (var i = 1; i < photo.length; i++) {
+    var photoThumbnail = document.createElement('img');
+    photoThumbnail.setAttribute('src', photo[i]);
+    photoThumbnail.setAttribute('class', 'img-thumbnail photo-thumbs');
+    photoThumbnail.setAttribute('width', '135px');
+    timeline.appendChild(photoThumbnail);
+  }
+  var defaultPhoto = document.createElement('img');
+  defaultPhoto.setAttribute('src', photo[0]);
+  defaultPhoto.setAttribute('class', 'img-thumbnail');
+  defaultPhoto.setAttribute('width', '810px');
+  timeline.appendChild(defaultPhoto);
 }
 
 function getPalmed(button, likes) {

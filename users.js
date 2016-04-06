@@ -28,8 +28,6 @@ var users = [
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
       'images/placeholder_user.svg'
     ],
     image: 'images/Ted-Bell-profile.jpg',
@@ -114,8 +112,6 @@ var users = [
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
       'images/placeholder_user.svg'
     ],
     image: 'images/Lloyd-Bonafide-profile.jpg',
@@ -194,8 +190,6 @@ var users = [
     ],
     friendsCount: 3,
     photos: [
-      'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
@@ -290,8 +284,6 @@ var users = [
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
       'images/placeholder_user.svg'
     ],
     image: 'images/Art-Griego-profile.jpg',
@@ -370,8 +362,6 @@ var users = [
     ],
     friendsCount: 3,
     photos: [
-      'images/placeholder_user.svg',
-      'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
       'images/placeholder_user.svg',
