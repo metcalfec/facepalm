@@ -48,6 +48,10 @@ app.post('/timeline/', jsonParser, function(req, res) {
 
 app.post('/add_friend/', jsonParser, function(req, res) {
   //The active user
+  console.log(req.body.text)
+  if (req.body.text === 'Photos') {
+    res.json({targetClick: 'Photos'});
+  }
   var theUser = {
     name: activeUser.name,
     image: activeUser.image
@@ -73,12 +77,12 @@ app.post('/add_friend/', jsonParser, function(req, res) {
         activeUser.friends.splice(i, 1);
       }
     }
-    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends});
+    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends, friends: true});
   }
   if (req.body.text === 'Add Friend') {
     friendInQuestion.friends.push(theUser);
     activeUser.friends.push(friend);
-    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends});
+    res.json({targetFriends: friendInQuestion.friends, userFriends: activeUser.friends, friends: true});
   }
 });
 
