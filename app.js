@@ -91,10 +91,10 @@ app.post('/search/', jsonParser, function(req, res) {
     }
   }
   if (matched.length > 0) {
-    res.json({matched: matched[0], active: users[2]});
+    res.json({matched: matched[0], active: users[2], locate: true});
   }
   else {
-    res.json({message: 'No matches found'});
+    res.json({locate: false, search: req.body.search});
   }
 });
 

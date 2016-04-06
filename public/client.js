@@ -46,6 +46,9 @@ timeline.addEventListener('click', function(event) {
   });
 });
 
+////////////////////////////////////////////////////////////////////////////////
+//Add/Remove Friends
+////////////////////////////////////////////////////////////////////////////////
 
 jumbo.addEventListener('click', function(event) {
 
@@ -93,22 +96,38 @@ search.addEventListener('submit', function(event) {
   xhr.addEventListener('load', function() {
     clearPage(timeline);
     clearPage(jumbo);
+    clearPage(friends);
 
     var responseObject = JSON.parse(xhr.responseText);
     console.log(responseObject);
-    var theTimeline = responseObject.matched.posts;
-    var active = responseObject.active;
-    var activeFriends = responseObject.active.friends;
-    var matched = responseObject.matched;
-    var matchedFriends = responseObject.matched.friends;
 
-    timeline.className = 'col-md-6';
-    showPosts(theTimeline);
+    if (responseObject.locate !== true) {
+      clearPage(timeline);
+      clearPage(jumbo);
+      clearPage(friends);
+      jumbo.className = 'col-md-12';
+      var noResults = document.createElement('p');
+      noResults.className = 'no-results text-center';
+      noResults.textContent = '\'' + responseObject.search + '\'' + ' was not found. Try searching for \'Ted Bell\'';
 
-    clearPage(friends);
-    friends.className = 'col-md-3 buffer';
-    showFriends(matchedFriends);
-    showJumbo(matched, active);
+      jumbo.appendChild(noResults);
+    }
+    else {
+      var theTimeline = responseObject.matched.posts;
+      var active = responseObject.active;
+      var activeFriends = responseObject.active.friends;
+      var matched = responseObject.matched;
+      var matchedFriends = responseObject.matched.friends;
+
+      timeline.className = 'col-md-6';
+      showPosts(theTimeline);
+
+
+      friends.className = 'col-md-3 buffer';
+      showFriends(matchedFriends);
+      showJumbo(matched, active);
+    }
+
   });
 });
 
