@@ -3,6 +3,7 @@ var app = express();
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 var users = require('./users.js')
+var port = process.env.PORT || 1337;
 
 var activeUser = users[2];
 var activeUserFriends = [];
@@ -120,6 +121,7 @@ app.post('/search/', jsonParser, function(req, res) {
   }
 });
 
-app.listen(8080, function() {
-  console.log('Listening on 8080');
-})
+
+app.listen(port, function() {
+ console.log("listening on port " + port);
+});
