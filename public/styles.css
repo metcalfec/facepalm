@@ -87,8 +87,10 @@
 .thumb {
   position: relative;
   display: inline-block;
-  margin-left: 3px;
-  margin-right: 3px;
+  margin-top: 3px;
+  margin-right: 6px;
+  margin-bottom: 3px;
+  margin-left: 6px;
   width: 272px;
   height: 272px;
   overflow: hidden;
@@ -149,9 +151,18 @@
 }
 
 .modal-dialog{
-    width:auto;
+    width: auto;
 }
 
 .to-front {
   z-index: 1000;
+}
+
+.back-to-profile {
+  position: relative;
+  text-align: right;
+}
+
+.photo-br {
+  line-height: 100px;
 }
