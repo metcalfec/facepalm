@@ -76,7 +76,7 @@ timeline.addEventListener('click', function(event) {
     var responseObject = JSON.parse(xhr.responseText);
     if (responseObject.palm === true) {
       var userLiked = responseObject.userLiked;
-      getPalmed(theClick, userLiked);
+      getPalmed(click, userLiked);
     }
     else if (responseObject.back === true) {
       clearPage(timeline);
