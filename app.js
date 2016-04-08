@@ -4,29 +4,36 @@ var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
 var users = require('./users.js');
 var port = process.env.PORT || 1337;
-
 var activeUser = users[2];
 var activeUserFriends = [];
 
 app.use(express.static('./public/'));
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//Home Page Route
+///////////////////////////////////////////////////////////////////////////////////////////
 
 app.get('/home/', function(req, res) {
   res.send();
 });
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//Active User Route
+///////////////////////////////////////////////////////////////////////////////////////////
+
 app.post('/profile/', jsonParser, function(req, res) {
   var matched = [];
-
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.ID) {
       matched.push(users[i]);
     }
   }
-  console.log(matched);
   res.json({matched: matched[0], active: activeUser});
 });
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//Timeline Route
+///////////////////////////////////////////////////////////////////////////////////////////
 
 app.post('/timeline/', jsonParser, function(req, res) {
   var matched = [];
@@ -49,7 +56,6 @@ app.post('/timeline/', jsonParser, function(req, res) {
         }
       }
       res.json({likes: likes, userLiked: userLiked, palm: true})
-      console.log({likes: likes, userLiked: userLiked});
     }
     else if (theText === 'UnPalm') {
       for (var i = 0; i < users.length; i++) {
@@ -62,7 +68,6 @@ app.post('/timeline/', jsonParser, function(req, res) {
         }
       }
       res.json({likes: likes, userLiked: userLiked, palm: true})
-      console.log({likes: likes, userLiked: userLiked});
     }
     else if (theText === 'back to profile') {
       for (var i = 0; i < users.length; i++) {
@@ -70,32 +75,22 @@ app.post('/timeline/', jsonParser, function(req, res) {
           matched.push(users[i])
         }
       }
-      console.log(req.body)
       res.json({matched: matched[0], active: activeUser, back: true});
     }
     else {
-      console.log('yoyo ' + theText)
       for (var p = 0; p < users.length; p++) {
         if (theID == users[p].id) {
           matched.push(users[p])
         }
       }
-      console.log('matched: ' + matched)
       res.json({matched: matched[0], active: activeUser});
     }
   }
-  // else if (theID){
-  //   for (var i = 0; i < users.length; i++) {
-  //     if (parseInt(theID) === users[i].id) {
-  //       matched.push(users[i])
-  //     }
-  //   }
-  //   console.log(matched.indexOf(0))
-  //   if (matched.indexOf(0) !== -1) {
-  //     res.json({matched: matched[0], active: activeUser, travel: true, palm: false})
-  //   }
-  // }
-})
+});
+
+///////////////////////////////////////////////////////////////////////////////////////////
+//Friend Navigation Route
+///////////////////////////////////////////////////////////////////////////////////////////
 
 app.post('/view-friend/', jsonParser, function(req, res) {
   var matched = [];
@@ -105,20 +100,16 @@ app.post('/view-friend/', jsonParser, function(req, res) {
         matched.push(users[i]);
       }
     }
-    console.log(matched[0]);
     res.json({matched: matched[0], active: activeUser});
   }
 });
 
 app.post('/add-friend/', jsonParser, function(req, res) {
-  //The active user
-
   var theUser = {
     name: activeUser.name,
     image: activeUser.image,
     id: activeUser.id
   };
-  //The friend in question
   for (var i = 0; i < users.length; i++) {
     if (users[i].id == req.body.button) {
       var friendInQuestion = users[i];
@@ -129,7 +120,6 @@ app.post('/add-friend/', jsonParser, function(req, res) {
       }
     }
   }
-
   if (req.body.text === 'Photos') {
     for (var i = 0; i < users.length; i++) {
       if (req.body.button == users[i].id) {
@@ -164,9 +154,12 @@ app.post('/add-friend/', jsonParser, function(req, res) {
   }
 });
 
+///////////////////////////////////////////////////////////////////////////////////////////
+//Search Route
+///////////////////////////////////////////////////////////////////////////////////////////
+
 app.post('/search/', jsonParser, function(req, res) {
   var matched = [];
-
   for (var i = 0; i < users.length; i++) {
     if (users[i].name == req.body.search) {
       matched.push(users[i]);
@@ -179,7 +172,6 @@ app.post('/search/', jsonParser, function(req, res) {
     res.json({locate: false, search: req.body.search});
   }
 });
-
 
 app.listen(port, function() {
  console.log("listening on port " + port);
