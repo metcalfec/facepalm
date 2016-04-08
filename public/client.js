@@ -295,18 +295,24 @@ function showJumbo(matched, active) {
     photoCol.appendChild(photoDiv);
   }
 
-  var mapCol = document.createElement('div');
-  mapCol.className = 'col-md-2 col-md-offset-2';
-
-  var mapDiv = document.createElement('div');
-  mapDiv.className = 'map-preview';
-
   if (matched.name == active.name) {
+    var mapCol = document.createElement('div');
+    mapCol.className = 'col-md-2 col-md-offset-2';
+
+    var mapDiv = document.createElement('div');
+    mapDiv.className = 'map-preview-shift';
+
     var map = document.createElement('img');
     map.setAttribute('src', matched.map);
-    map.className = 'map-preview-shift';
   }
+
   else {
+    var mapCol = document.createElement('div');
+    mapCol.className = 'col-md-2 col-md-offset-2';
+
+    var mapDiv = document.createElement('div');
+    mapDiv.className = 'map-preview';
+
     var map = document.createElement('img');
     map.setAttribute('src', matched.map);
   }
