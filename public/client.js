@@ -92,6 +92,21 @@ timeline.addEventListener('click', function(event) {
       var userLiked = responseObject.userLiked;
       getPalmed(theClick, userLiked);
     }
+    else if (responseObject.back === true) {
+      clearPage(timeline);
+      clearPage(jumbo);
+      clearPage(friends);
+      var theTimeline = responseObject.matched.posts;
+      var active = responseObject.active;
+      var activeFriends = responseObject.active.friends;
+      var matched = responseObject.matched;
+      var matchedFriends = responseObject.matched.friends;
+      timeline.className = 'col-md-9';
+      showPosts(theTimeline);
+      friends.className = 'col-md-3 buffer';
+      showFriends(matchedFriends);
+      showJumbo(matched, active);
+    }
     else {
       clearPage(timeline);
       clearPage(jumbo);
@@ -163,22 +178,22 @@ jumbo.addEventListener('click', function(event) {
       clearPage(friends);
       clearPage(timeline);
       timeline.className = 'col-md-12';
-      var imageModal = document.createElement('img');
-      imageModal.setAttribute('data-dismiss', 'modal');
-      imageModal.setAttribute('src', 'http://keystoneaviation.com/wp-content/uploads/2013/10/1289852453_1.jpg');
-      imageModal.className = 'to-front';
-      modalGrab[0].appendChild(imageModal);
-      // <img data-dismiss="modal" src="http://keystoneaviation.com/wp-content/uploads/2013/10/1289852453_1.jpg">
-
-
-
-
       var title = document.createElement('h1');
       title.textContent = 'Photos';
       title.className = 'title-photo';
+      var link = document.createElement('a');
+      link.setAttribute('href', '#');
+      var back = document.createElement('h5');
+      back.textContent = 'back to profile';
+      back.setAttribute('data-id', responseObject.profile.id)
+      back.className = 'back-to-profile';
       var hr = document.createElement('hr');
+
       timeline.appendChild(title);
+      link.appendChild(back);
+      timeline.appendChild(link);
       timeline.appendChild(hr);
+
       if (responseObject.activeUser === true) {
         showPhotos(responseObject.photos);
       }
@@ -404,8 +419,13 @@ function showPhotos(photo) {
     photoThumbnail.setAttribute('src', photo[i]);
     a.appendChild(photoThumbnail);
     thumbDiv.appendChild(a);
-    modal.appendChild(thumbDiv);
+    timeline.appendChild(thumbDiv);
   }
+  var hr = document.createElement('hr');
+  var br = document.createElement('br');
+  br.className = 'photo-br';
+  timeline.appendChild(hr);
+  timeline.appendChild(br);
 }
 
 function getPalmed(button, likes) {

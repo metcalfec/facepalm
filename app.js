@@ -64,6 +64,15 @@ app.post('/timeline/', jsonParser, function(req, res) {
       res.json({likes: likes, userLiked: userLiked, palm: true})
       console.log({likes: likes, userLiked: userLiked});
     }
+    else if (theText === 'back to profile') {
+      for (var i = 0; i < users.length; i++) {
+        if (theID == users[i].id) {
+          matched.push(users[i])
+        }
+      }
+      console.log(req.body)
+      res.json({matched: matched[0], active: activeUser, back: true});
+    }
     else {
       console.log('yoyo ' + theText)
       for (var p = 0; p < users.length; p++) {
@@ -129,10 +138,10 @@ app.post('/add-friend/', jsonParser, function(req, res) {
       }
     }
     if (friend === activeUser) {
-      res.json({targetClick: 'Photos', photos: friendPhotos, friends: false, activeUser: true});
+      res.json({targetClick: 'Photos', profile: friend, photos: friendPhotos, friends: false, activeUser: true});
     }
     else {
-      res.json({targetClick: 'Photos', photos: friendPhotos, friends: false, activeUser: false});
+      res.json({targetClick: 'Photos', profile: friend, photos: friendPhotos, friends: false, activeUser: false});
     }
   }
   else if (req.body.text === 'Kill Friend') {
