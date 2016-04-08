@@ -295,6 +295,22 @@ function showJumbo(matched, active) {
     photoCol.appendChild(photoDiv);
   }
 
+  var mapCol = document.createElement('div');
+  mapCol.className = 'col-md-2 col-md-offset-2';
+
+  var mapDiv = document.createElement('div');
+  mapDiv.className = 'map-preview';
+
+  if (matched.name == active.name) {
+    var map = document.createElement('img');
+    map.setAttribute('src', matched.map);
+    map.className = 'map-preview-shift';
+  }
+  else {
+    var map = document.createElement('img');
+    map.setAttribute('src', matched.map);
+  }
+
   var addCol = document.createElement('div');
   addCol.className = 'col-md-2 col-md-offset-3';
 
@@ -319,21 +335,32 @@ function showJumbo(matched, active) {
   jumboLabelPhotos.className = 'jumbo-label-buffer'
   jumboLabelPhotos.setAttribute('data-id', matched.id);
 
+  var jumboLabelMapCol = document.createElement('div');
+  jumboLabelMapCol.className = 'col-md-4'
+
+  var jumboLabelMap = document.createElement('p');
+  jumboLabelMap.textContent = 'Map'
+  jumboLabelMap.className = 'jumbo-label-buffer jumbo-map-buffer'
+
   column.appendChild(banner);
   aboutUl.appendChild(ListOne);
   aboutUl.appendChild(ListTwo);
   aboutUl.appendChild(ListThree);
   aboutUl.appendChild(ListFour);
   aboutCol.appendChild(aboutUl);
+  mapDiv.appendChild(map);
+  mapCol.appendChild(mapDiv);
   panelBody.appendChild(aboutCol);
-  panelBody.appendChild(photoCol)
+  panelBody.appendChild(photoCol);
   panelBody.appendChild(addCol);
+  panelBody.appendChild(mapCol);
   jumboLabelAboutCol.appendChild(jumboLabelAbout);
   jumboFooter.appendChild(jumboLabelAboutCol);
-  jumboLabelPhotosCol.appendChild(jumboLabelPhotos);
   jumboPhotoLink.appendChild(jumboLabelPhotos);
   jumboLabelPhotosCol.appendChild(jumboPhotoLink);
   jumboFooter.appendChild(jumboLabelPhotosCol);
+  jumboLabelMapCol.appendChild(jumboLabelMap);
+  jumboFooter.appendChild(jumboLabelMapCol);
   panel.appendChild(imageLg);
   panel.appendChild(name);
   panel.appendChild(panelBody);

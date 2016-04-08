@@ -93,6 +93,7 @@ var users = [
     ],
     image: 'images/art-griego-profile.jpg',
     banner: 'images/art-griego-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 12001,
@@ -300,6 +301,7 @@ var users = [
     ],
     image: 'images/austin-amarka-profile.jpg',
     banner: 'images/austin-amarka-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 29001,
@@ -453,7 +455,7 @@ var users = [
         id: 1
       }
     ],
-    friendsCount: 3,
+    friendsCount: 8,
     photos: [
       'http://img.photobucket.com/albums/v260/Ztex/Aero%202007/CH4N44TV.jpg',
       'http://img.photobucket.com/albums/v260/Ztex/Aero%202007/CH5N555TV.jpg',
@@ -470,6 +472,7 @@ var users = [
     ],
     image: 'images/bob-bakian-profile.jpg',
     banner: 'images/bob-bakian-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 311001,
@@ -632,6 +635,7 @@ var users = [
     ],
     image: 'images/bob-green-profile.jpg',
     banner: 'images/bob-green-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 47001,
@@ -807,6 +811,7 @@ var users = [
     ],
     image: 'images/bobbie-dooley-profile.jpg',
     banner: 'images/bobbie-dooley-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 512001,
@@ -978,6 +983,7 @@ var users = [
     ],
     image: 'images/bud-dickman-profile.jpg',
     banner: 'images/bud-dickman-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 65001,
@@ -1158,6 +1164,7 @@ var users = [
     ],
     image: 'images/chris-norton-profile.jpg',
     banner: 'images/chris-norton-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 78001,
@@ -1357,6 +1364,7 @@ var users = [
     ],
     image: 'images/david-hall-profile.jpg',
     banner: 'images/david-hall-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 813001,
@@ -1535,6 +1543,7 @@ var users = [
     ],
     image: 'images/dean-wheeler-profile.jpg',
     banner: 'images/dean-wheeler-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 97001,
@@ -1674,6 +1683,7 @@ var users = [
     ],
     image: 'images/harvey-wireman-profile.jpg',
     banner: 'images/harvey-wireman-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 1011001,
@@ -1850,6 +1860,7 @@ var users = [
     ],
     image: 'images/jay-santos-profile.jpg',
     banner: 'images/jay-santos-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 117001,
@@ -2039,6 +2050,7 @@ var users = [
     ],
     image: 'images/lloyd-bonafide-profile.jpg',
     banner: 'images/lloyd-bonafide-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 1210001,
@@ -2228,6 +2240,7 @@ var users = [
     ],
     image: 'images/rick-sunderland-profile.jpg',
     banner: 'images/rick-sunderland-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 136001,
@@ -2408,6 +2421,7 @@ var users = [
     ],
     image: 'images/ted-bell-profile.jpg',
     banner: 'images/ted-bell-jumbo.jpg',
+    map: 'http://jackstephan.com/wp-content/uploads/2013/04/Los-Angeles-CA-Google-Maps.jpg',
     posts: [
       {
         postID: 1412001,

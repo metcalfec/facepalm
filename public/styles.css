@@ -78,6 +78,9 @@
 .jumbo-about-buffer {
   margin-left: -70px;
 }
+.jumbo-map-buffer {
+  padding-left: 185px;
+}
 
 .title-photo {
   font-size: 50px;
@@ -165,4 +168,28 @@
 
 .photo-br {
   line-height: 100px;
+}
+
+.map-preview {
+  position: relative;
+  display: inline-block;
+  margin-top: -20px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border: solid #ffffff 2px;
+  width: 180px;
+  height: 85px;
+  overflow: hidden;
+}
+
+.map-preview-shift {
+  position: relative;
+  display: inline-block;
+  margin-top: 25px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border: solid #ffffff 2px;
+  width: 180px;
+  height: 85px;
+  overflow: hidden;
 }
