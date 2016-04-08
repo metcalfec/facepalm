@@ -90,22 +90,7 @@ var users = [
     banner: 'images/art-griego-jumbo.jpg',
     posts: [
       {
-        postID: 1001,
-        poster: 'art griego',
-        thumbnail: 'images/art-griego-profile.jpg',
-        posterID: 1,
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: [
-          {
-            name: 'art griego',
-            image: 'images/art-griego-profile.jpg',
-            id: 1
-          }
-        ]
-      },
-      {
-        postID: 2001,
+        postID: 12001,
         poster: 'austin amarka',
         thumbnail: 'images/austin-amarka-profile.jpg',
         posterID: 2,
@@ -114,7 +99,7 @@ var users = [
         userLiked: []
       },
       {
-        postID: 3001,
+        postID: 13001,
         poster: 'bob bakian',
         thumbnail: 'images/bob-bakian-profile.jpg',
         posterID: 3,
@@ -123,93 +108,113 @@ var users = [
         userLiked: []
       },
       {
-        postID: 4001,
+        postID: 14001,
         poster: 'bob green',
         thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 5001,
+        postID: 15001,
         poster: 'bobbie dooley',
         thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 6001,
+        postID: 16001,
         poster: 'bud dickman',
         thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 7001,
+        postID: 17001,
         poster: 'chris norton',
         thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 8001,
+        postID: 18001,
         poster: 'david hall',
         thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
         post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 9001,
+        postID: 11001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 19001,
         poster: 'dean wheeler',
         thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
         post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 10001,
+        postID: 110001,
         poster: 'harvey wireman',
         thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
         post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 11001,
+        postID: 111001,
         poster: 'jay santos',
         thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 12001,
+        postID: 112001,
         poster: 'lloyd bonafide',
         thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 13001,
+        postID: 113001,
         poster: 'rick sunderland',
         thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 14001,
+        postID: 114001,
         poster: 'ted-bell',
         thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
-      },
+      }
     ]
   },
   {
@@ -223,19 +228,19 @@ var users = [
     ],
     friends: [
       {
-        name: 'art griego',
-        image: 'images/art-griego-profile.jpg',
-        id: 1
-      },
-      {
         name: 'bob bakian',
         image: 'images/bob-bakian-profile.jpg',
         id: 3
       },
       {
-        name: 'bob green',
-        image: 'images/bob-green-profile.jpg',
-        id: 4
+        name: 'ted bell',
+        image: 'images/ted-bell-profile.jpg',
+        id: 14
+      },
+      {
+        name: 'rick sunderland',
+        image: 'images/rick-sunderland-profile.jpg',
+        id: 13
       },
       {
         name: 'bobbie dooley',
@@ -243,19 +248,9 @@ var users = [
         id: 5
       },
       {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
+        name: 'art griego',
+        image: 'images/art-griego-profile.jpg',
+        id: 1
       },
       {
         name: 'dean wheeler',
@@ -268,24 +263,19 @@ var users = [
         id: 10
       },
       {
+        name: 'bud dickman',
+        image: 'images/bud-dickman-profile.jpg',
+        id: 6
+      },
+      {
         name: 'jay santos',
         image: 'images/jay-santos-profile.jpg',
         id: 11
       },
       {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
       }
     ],
     friendsCount: 3,
@@ -302,57 +292,100 @@ var users = [
     banner: 'images/austin-amarka-jumbo.jpg',
     posts: [
       {
-        postID: 114,
-        poster: 'ted bell',
-        thumbnail: 'images/ted-bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 108,
-        poster: 'david hall',
-        thumbnail: 'images/david-hall-profile.jpg',
+        postID: 29001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
         post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 103,
-        poster: 'bob bakian',
-        thumbnail: 'images/bob-bakian-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 113,
-        poster: 'rick sunderland',
-        thumbnail: 'images/rick-sunderland-profile.jpg',
-        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 106,
-        poster: 'bud dickman',
-        thumbnail: 'images/bud-dickman-profile.jpg',
-        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'austin amarka',
-        thumbnail: 'images/austin-amarka-profile.jpg',
+        postID: 214001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 110,
+        postID: 210001,
         poster: 'harvey wireman',
         thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 25001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 22001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 26001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 28001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 211001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 23001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 21001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 213001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -370,14 +403,14 @@ var users = [
     ],
     friends: [
       {
-        name: 'art griego',
-        image: 'images/art-griego-profile.jpg',
-        id: 1
-      },
-      {
         name: 'austin amarka',
         image: 'images/austin-amarka-profile.jpg',
         id: 2
+      },
+      {
+        name: 'lloyd bonafide',
+        image: 'images/lloyd-bonafide-profile.jpg',
+        id: 12
       },
       {
         name: 'bob green',
@@ -385,29 +418,9 @@ var users = [
         id: 4
       },
       {
-        name: 'bobbie dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
+        name: 'rick sunderland',
+        image: 'images/rick-sunderland-profile.jpg',
+        id: 13
       },
       {
         name: 'harvey wireman',
@@ -420,19 +433,14 @@ var users = [
         id: 11
       },
       {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
+        name: 'dean wheeler',
+        image: 'images/dean-wheeler-profile.jpg',
+        id: 9
       },
       {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
+        name: 'art griego',
+        image: 'images/art-griego-profile.jpg',
+        id: 1
       }
     ],
     friendsCount: 3,
@@ -449,49 +457,82 @@ var users = [
     banner: 'images/bob-bakian-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 311001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 32001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 312001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 34001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 39001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 33001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 31001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 310001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 313001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -514,9 +555,9 @@ var users = [
         id: 1
       },
       {
-        name: 'austin amarka',
-        image: 'images/austin-amarka-profile.jpg',
-        id: 2
+        name: 'dean wheeler',
+        image: 'images/dean-wheeler-profile.jpg',
+        id: 9
       },
       {
         name: 'bob bakian',
@@ -524,9 +565,9 @@ var users = [
         id: 3
       },
       {
-        name: 'bobbie dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
+        name: 'jay santos',
+        image: 'images/jay-santos-profile.jpg',
+        id: 11
       },
       {
         name: 'bud dickman',
@@ -544,19 +585,9 @@ var users = [
         id: 8
       },
       {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
         name: 'harvey wireman',
         image: 'images/harvey-wireman-profile.jpg',
         id: 10
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
       },
       {
         name: 'lloyd bonafide',
@@ -564,14 +595,9 @@ var users = [
         id: 12
       },
       {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
+        name: 'bobbie dooley',
+        image: 'images/bobbie-dooley-profile.jpg',
+        id: 5
       }
     ],
     friendsCount: 3,
@@ -588,56 +614,101 @@ var users = [
     banner: 'images/bob-green-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: [
-          // {
-          //   name: 'Lloyd Bonafide',
-          //   image: 'images/Lloyd-Bonafide-profile.jpg',
-          //   id: 2
-          // }
-        ]
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        postID: 47001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 44001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 45001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 48001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 46001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 41001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 43001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 49001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 410001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 411001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 412001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       }
@@ -654,6 +725,21 @@ var users = [
     ],
     friends: [
       {
+        name: 'rick sunderland',
+        image: 'images/rick-sunderland-profile.jpg',
+        id: 13
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'chris norton',
+        image: 'images/chris-norton-profile.jpg',
+        id: 7
+      },
+      {
         name: 'art griego',
         image: 'images/art-griego-profile.jpg',
         id: 1
@@ -662,11 +748,6 @@ var users = [
         name: 'austin amarka',
         image: 'images/austin-amarka-profile.jpg',
         id: 2
-      },
-      {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
       },
       {
         name: 'bob green',
@@ -679,38 +760,9 @@ var users = [
         id: 6
       },
       {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-      },
-      {
-        name: 'harvey wireman',
-        image: 'images/harvey-wireman-profile.jpg',
-        id: 10
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
-      },
-      {
         name: 'lloyd bonafide',
         image: 'images/lloyd-bonafide-profile.jpg',
         id: 12
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
       },
       {
         name: 'ted bell',
@@ -732,49 +784,91 @@ var users = [
     banner: 'images/bobbie-dooley-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
-        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 512001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 51001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 54001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 56001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 57001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 52001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 58001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 513001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 55001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 514001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -792,6 +886,21 @@ var users = [
     ],
     friends: [
       {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'lloyd bonafide',
+        image: 'images/lloyd-bonafide-profile.jpg',
+        id: 12
+      },
+      {
+        name: 'ted bell',
+        image: 'images/ted-bell-profile.jpg',
+        id: 14
+      },
+      {
         name: 'art griego',
         image: 'images/art-griego-profile.jpg',
         id: 1
@@ -802,19 +911,9 @@ var users = [
         id: 2
       },
       {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
-      },
-      {
         name: 'bob green',
         image: 'images/bob-green-profile.jpg',
         id: 4
-      },
-      {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
       },
       {
         name: 'chris norton',
@@ -822,39 +921,19 @@ var users = [
         id: 7
       },
       {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
-        name: 'harvey wireman',
-        image: 'images/harvey-wireman-profile.jpg',
-        id: 10
-      },
-      {
         name: 'jay santos',
         image: 'images/jay-santos-profile.jpg',
         id: 11
       },
       {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
+        name: 'bobbie-dooley',
+        image: 'images/bobbie-dooley-profile.jpg',
+        id: 5
       },
       {
         name: 'rick sunderland',
         image: 'images/rick-sunderland-profile.jpg',
         id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
       }
     ],
     friendsCount: 3,
@@ -871,49 +950,100 @@ var users = [
     banner: 'images/bud-dickman-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
-        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 65001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 64001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 61001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 62001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 66001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 613001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 67001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 68001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 611001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 612001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 614001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -931,44 +1061,9 @@ var users = [
     ],
     friends: [
       {
-        name: 'art griego',
-        image: 'images/art-griego-profile.jpg',
-        id: 1
-      },
-      {
-        name: 'austin amarka',
-        image: 'images/austin-amarka-profile.jpg',
-        id: 2
-      },
-      {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
-      },
-      {
-        name: 'bob green',
-        image: 'images/bob-green-profile.jpg',
-        id: 4
-      },
-      {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
         name: 'bud dickman',
         image: 'images/bud-dickman-profile.jpg',
         id: 6
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
       },
       {
         name: 'harvey wireman',
@@ -981,14 +1076,34 @@ var users = [
         id: 11
       },
       {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
-      },
-      {
         name: 'rick sunderland',
         image: 'images/rick-sunderland-profile.jpg',
         id: 13
+      },
+      {
+        name: 'bob green',
+        image: 'images/bob-green-profile.jpg',
+        id: 4
+      },
+      {
+        name: 'bobbie-dooley',
+        image: 'images/bobbie-dooley-profile.jpg',
+        id: 5
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'dean wheeler',
+        image: 'images/dean-wheeler-profile.jpg',
+        id: 9
+      },
+      {
+        name: 'art griego',
+        image: 'images/art-griego-profile.jpg',
+        id: 1
       },
       {
         name: 'ted bell',
@@ -1010,49 +1125,109 @@ var users = [
     banner: 'images/chris-norton-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
+        postID: 78001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
         post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        postID: 71001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 74001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 75001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 77001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 76001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 714001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 79001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 710001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 711001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 72001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 713001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -1070,6 +1245,31 @@ var users = [
     ],
     friends: [
       {
+        name: 'rick sunderland',
+        image: 'images/rick-sunderland-profile.jpg',
+        id: 13
+      },
+      {
+        name: 'ted bell',
+        image: 'images/ted-bell-profile.jpg',
+        id: 14
+      },
+      {
+        name: 'bud dickman',
+        image: 'images/bud-dickman-profile.jpg',
+        id: 6
+      },
+      {
+        name: 'jay santos',
+        image: 'images/jay-santos-profile.jpg',
+        id: 11
+      },
+      {
+        name: 'lloyd bonafide',
+        image: 'images/lloyd-bonafide-profile.jpg',
+        id: 12
+      },
+      {
         name: 'art griego',
         image: 'images/art-griego-profile.jpg',
         id: 1
@@ -1080,11 +1280,6 @@ var users = [
         id: 2
       },
       {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
-      },
-      {
         name: 'bob green',
         image: 'images/bob-green-profile.jpg',
         id: 4
@@ -1093,11 +1288,6 @@ var users = [
         name: 'bobbie-dooley',
         image: 'images/bobbie-dooley-profile.jpg',
         id: 5
-      },
-      {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
       },
       {
         name: 'chris norton',
@@ -1113,26 +1303,6 @@ var users = [
         name: 'harvey wireman',
         image: 'images/harvey-wireman-profile.jpg',
         id: 10
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
-      },
-      {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
       }
     ],
     friendsCount: 3,
@@ -1149,49 +1319,118 @@ var users = [
     banner: 'images/david-hall-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
+        postID: 813001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 81001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
         post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 82001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
         post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 84001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 85001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 86001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 87001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 88001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 89001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 810001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 811001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 812001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 814001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -1214,6 +1453,16 @@ var users = [
         id: 1
       },
       {
+        name: 'chris norton',
+        image: 'images/chris-norton-profile.jpg',
+        id: 7
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
         name: 'austin amarka',
         image: 'images/austin-amarka-profile.jpg',
         id: 2
@@ -1227,51 +1476,6 @@ var users = [
         name: 'bob green',
         image: 'images/bob-green-profile.jpg',
         id: 4
-      },
-      {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'harvey wireman',
-        image: 'images/harvey-wireman-profile.jpg',
-        id: 10
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
-      },
-      {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
       }
     ],
     friendsCount: 3,
@@ -1288,50 +1492,65 @@ var users = [
     banner: 'images/dean-wheeler-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
+        postID: 97001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 98001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
         post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 99001,
+        poster: 'dean wheeler',
+        thumbnail: 'images/dean-wheeler-profile.jpg',
+        posterID: 9,
         post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
+        postID: 91001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 92001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 93001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
         post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 94001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
-        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       }
@@ -1348,6 +1567,31 @@ var users = [
     ],
     friends: [
       {
+        name: 'ted bell',
+        image: 'images/ted-bell-profile.jpg',
+        id: 14
+      },
+      {
+        name: 'chris norton',
+        image: 'images/chris-norton-profile.jpg',
+        id: 7
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'jay santos',
+        image: 'images/jay-santos-profile.jpg',
+        id: 11
+      },
+      {
+        name: 'lloyd bonafide',
+        image: 'images/lloyd-bonafide-profile.jpg',
+        id: 12
+      },
+      {
         name: 'art griego',
         image: 'images/art-griego-profile.jpg',
         id: 1
@@ -1366,51 +1610,6 @@ var users = [
         name: 'bob green',
         image: 'images/bob-green-profile.jpg',
         id: 4
-      },
-      {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
-      },
-      {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
       }
     ],
     friendsCount: 3,
@@ -1427,50 +1626,92 @@ var users = [
     banner: 'images/harvey-wireman-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 1011001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 1012001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 1014001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 101001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 102001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 107001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 108001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 103001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 104001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1010001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
         likes: 0,
         userLiked: []
       }
@@ -1487,11 +1728,6 @@ var users = [
     ],
     friends: [
       {
-        name: 'art griego',
-        image: 'images/art-griego-profile.jpg',
-        id: 1
-      },
-      {
         name: 'austin amarka',
         image: 'images/austin-amarka-profile.jpg',
         id: 2
@@ -1502,19 +1738,24 @@ var users = [
         id: 3
       },
       {
+        name: 'lloyd bonafide',
+        image: 'images/lloyd-bonafide-profile.jpg',
+        id: 12
+      },
+      {
         name: 'bob green',
         image: 'images/bob-green-profile.jpg',
         id: 4
       },
       {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
         name: 'bud dickman',
         image: 'images/bud-dickman-profile.jpg',
         id: 6
+      },
+      {
+        name: 'art griego',
+        image: 'images/art-griego-profile.jpg',
+        id: 1
       },
       {
         name: 'chris norton',
@@ -1527,19 +1768,9 @@ var users = [
         id: 8
       },
       {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
         name: 'harvey wireman',
         image: 'images/harvey-wireman-profile.jpg',
         id: 10
-      },
-      {
-        name: 'lloyd bonafide',
-        image: 'images/lloyd-bonafide-profile.jpg',
-        id: 12
       },
       {
         name: 'rick sunderland',
@@ -1566,49 +1797,109 @@ var users = [
     banner: 'images/jay-santos-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
+        postID: 117001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 118001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
         post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
+        postID: 1110001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
         post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 1111001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 1112001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 111001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 112001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 113001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 114001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 116001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1113001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1114001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -1631,9 +1922,24 @@ var users = [
         id: 1
       },
       {
-        name: 'austin amarka',
-        image: 'images/austin-amarka-profile.jpg',
-        id: 2
+        name: 'bud dickman',
+        image: 'images/bud-dickman-profile.jpg',
+        id: 6
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'rick sunderland',
+        image: 'images/rick-sunderland-profile.jpg',
+        id: 13
+      },
+      {
+        name: 'ted bell',
+        image: 'images/ted-bell-profile.jpg',
+        id: 14
       },
       {
         name: 'bob bakian',
@@ -1651,26 +1957,6 @@ var users = [
         id: 5
       },
       {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
-      },
-      {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
-      },
-      {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
         name: 'harvey wireman',
         image: 'images/harvey-wireman-profile.jpg',
         id: 10
@@ -1679,16 +1965,6 @@ var users = [
         name: 'jay santos',
         image: 'images/jay-santos-profile.jpg',
         id: 11
-      },
-      {
-        name: 'rick sunderland',
-        image: 'images/rick-sunderland-profile.jpg',
-        id: 13
-      },
-      {
-        name: 'ted bell',
-        image: 'images/ted-bell-profile.jpg',
-        id: 14
       }
     ],
     friendsCount: 3,
@@ -1705,50 +1981,110 @@ var users = [
     banner: 'images/lloyd-bonafide-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
+        postID: 1210001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
         post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
+        postID: 1211001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
         post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 1212001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 1213001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1214001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 121001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 122001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 123001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 124001,
+        poster: 'bob green',
+        thumbnail: 'images/bob-green-profile.jpg',
+        posterID: 4,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 125001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 126001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 128001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
         likes: 0,
         userLiked: []
       }
@@ -1770,26 +2106,6 @@ var users = [
         id: 1
       },
       {
-        name: 'austin amarka',
-        image: 'images/austin-amarka-profile.jpg',
-        id: 2
-      },
-      {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
-      },
-      {
-        name: 'bob green',
-        image: 'images/bob-green-profile.jpg',
-        id: 4
-      },
-      {
-        name: 'bobbie-dooley',
-        image: 'images/bobbie-dooley-profile.jpg',
-        id: 5
-      },
-      {
         name: 'bud dickman',
         image: 'images/bud-dickman-profile.jpg',
         id: 6
@@ -1800,24 +2116,14 @@ var users = [
         id: 7
       },
       {
-        name: 'david hall',
-        image: 'images/david-hall-profile.jpg',
-        id: 8
+        name: 'bob bakian',
+        image: 'images/bob-bakian-profile.jpg',
+        id: 3
       },
       {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
-        name: 'harvey wireman',
-        image: 'images/harvey-wireman-profile.jpg',
-        id: 10
-      },
-      {
-        name: 'jay santos',
-        image: 'images/jay-santos-profile.jpg',
-        id: 11
+        name: 'bobbie-dooley',
+        image: 'images/bobbie-dooley-profile.jpg',
+        id: 5
       },
       {
         name: 'lloyd bonafide',
@@ -1828,6 +2134,21 @@ var users = [
         name: 'ted bell',
         image: 'images/ted-bell-profile.jpg',
         id: 14
+      },
+      {
+        name: 'austin amarka',
+        image: 'images/austin-amarka-profile.jpg',
+        id: 2
+      },
+      {
+        name: 'david hall',
+        image: 'images/david-hall-profile.jpg',
+        id: 8
+      },
+      {
+        name: 'jay santos',
+        image: 'images/jay-santos-profile.jpg',
+        id: 11
       }
     ],
     friendsCount: 3,
@@ -1844,49 +2165,100 @@ var users = [
     banner: 'images/rick-sunderland-jumbo.jpg',
     posts: [
       {
-        postID: 101,
-        poster: 'Ted Bell',
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        postID: 136001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 102,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
-        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 135001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 137001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 131001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 132001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 133001,
+        poster: 'bob bakian',
+        thumbnail: 'images/bob-bakian-profile.jpg',
+        posterID: 3,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 138001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1314001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1311001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1312001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1313001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []
@@ -1898,8 +2270,9 @@ var users = [
     name: 'ted bell',
     about: [
       'Owner of Ted\'s of Beverly Hills Steak House',
-
-      'Lives in Beverly Hills'
+      'Was first to wrap  a baked potato in tinfoil',
+      'Invented the Rum and Coke...calls it a \'Ted\'',
+      'Lives in a huge house in Beverly Hills'
     ],
     friends: [
       {
@@ -1908,34 +2281,9 @@ var users = [
         id: 1
       },
       {
-        name: 'austin amarka',
-        image: 'images/austin-amarka-profile.jpg',
-        id: 2
-      },
-      {
-        name: 'bob bakian',
-        image: 'images/bob-bakian-profile.jpg',
-        id: 3
-      },
-      {
-        name: 'bob green',
-        image: 'images/bob-green-profile.jpg',
-        id: 4
-      },
-      {
         name: 'bobbie-dooley',
         image: 'images/bobbie-dooley-profile.jpg',
         id: 5
-      },
-      {
-        name: 'bud dickman',
-        image: 'images/bud-dickman-profile.jpg',
-        id: 6
-      },
-      {
-        name: 'chris norton',
-        image: 'images/chris-norton-profile.jpg',
-        id: 7
       },
       {
         name: 'david hall',
@@ -1943,14 +2291,9 @@ var users = [
         id: 8
       },
       {
-        name: 'dean wheeler',
-        image: 'images/dean-wheeler-profile.jpg',
-        id: 9
-      },
-      {
-        name: 'harvey wireman',
-        image: 'images/harvey-wireman-profile.jpg',
-        id: 10
+        name: 'austin amarka',
+        image: 'images/austin-amarka-profile.jpg',
+        id: 2
       },
       {
         name: 'jay santos',
@@ -1966,6 +2309,21 @@ var users = [
         name: 'rick sunderland',
         image: 'images/rick-sunderland-profile.jpg',
         id: 13
+      },
+      {
+        name: 'bud dickman',
+        image: 'images/bud-dickman-profile.jpg',
+        id: 6
+      },
+      {
+        name: 'chris norton',
+        image: 'images/chris-norton-profile.jpg',
+        id: 7
+      },
+      {
+        name: 'harvey wireman',
+        image: 'images/harvey-wireman-profile.jpg',
+        id: 10
       }
     ],
     friendsCount: 3,
@@ -1982,51 +2340,100 @@ var users = [
     banner: 'images/ted-bell-jumbo.jpg',
     posts: [
       {
-        postID: 101434,
-        poster: 'ted bell',
-        posterID: 14,
-        thumbnail: 'images/Ted-Bell-profile.jpg',
-        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 1022323,
-        poster: 'art griego',
-        posterID: 1,
-        thumbnail: 'images/Art-Griego-profile.jpg',
-        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 103,
-        poster: 'Jay Santos',
-        thumbnail: 'images/Jay-Santos-profile.jpg',
-        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 104,
-        poster: 'Rick Sunderland',
-        thumbnail: 'images/Rick-Sunderland-profile.jpg',
-        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
-        likes: 0,
-        userLiked: []
-      },
-      {
-        postID: 105,
-        poster: 'Lloyd Bonafide',
-        thumbnail: 'images/Lloyd-Bonafide-profile.jpg',
+        postID: 1412001,
+        poster: 'lloyd bonafide',
+        thumbnail: 'images/lloyd-bonafide-profile.jpg',
+        posterID: 12,
         post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
         likes: 0,
         userLiked: []
       },
       {
-        postID: 106,
-        poster: 'Art Griego',
-        thumbnail: 'images/Art-Griego-profile.jpg',
+        postID: 141001,
+        poster: 'art griego',
+        thumbnail: 'images/art-griego-profile.jpg',
+        posterID: 1,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1410001,
+        poster: 'harvey wireman',
+        thumbnail: 'images/harvey-wireman-profile.jpg',
+        posterID: 10,
+        post: 'Ex quem audire vix, veri dicant hendrerit et cum. Vix at percipitur dissentiet, ea utamur periculis est. Sumo aperiri his ut, his id falli mazim pericula. Omnium facilis ea per. No affert graecis his.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1411001,
+        poster: 'jay santos',
+        thumbnail: 'images/jay-santos-profile.jpg',
+        posterID: 11,
+        post: 'An mea fugit labitur fastidii, mel quot fugit eu. Eam cu appetere incorrupte, autem solet tamquam id duo, nam sonet persequeris suscipiantur an.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 142001,
+        poster: 'austin amarka',
+        thumbnail: 'images/austin-amarka-profile.jpg',
+        posterID: 2,
+        post: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 145001,
+        poster: 'bobbie dooley',
+        thumbnail: 'images/bobbie-dooley-profile.jpg',
+        posterID: 5,
+        post: 'Fugit nonumes vel cu, vis omnes offendit ponderum id, ea sed laoreet deterruisset. Pro nobis solet volumus no, ea nemore prompta accusamus qui.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 146001,
+        poster: 'bud dickman',
+        thumbnail: 'images/bud-dickman-profile.jpg',
+        posterID: 6,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 147001,
+        poster: 'chris norton',
+        thumbnail: 'images/chris-norton-profile.jpg',
+        posterID: 7,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 148001,
+        poster: 'david hall',
+        thumbnail: 'images/david-hall-profile.jpg',
+        posterID: 8,
+        post: 'Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1413001,
+        poster: 'rick sunderland',
+        thumbnail: 'images/rick-sunderland-profile.jpg',
+        posterID: 13,
+        post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
+        likes: 0,
+        userLiked: []
+      },
+      {
+        postID: 1414001,
+        poster: 'ted-bell',
+        thumbnail: 'images/ted-bell-profile.jpg',
+        posterID: 14,
         post: 'Pro in probo cotidieque, solet legimus ei duo. Fierent appellantur ullamcorper ad vis, ferri brute assum no vix.',
         likes: 0,
         userLiked: []

@@ -11,6 +11,23 @@ var activeUserFriends = [];
 app.use(express.static('./public/'));
 
 
+app.get('/home/', function(req, res) {
+  res.send();
+});
+
+app.post('/profile/', jsonParser, function(req, res) {
+  var matched = [];
+
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].id == req.body.ID) {
+      matched.push(users[i]);
+    }
+  }
+  console.log(matched);
+  res.json({matched: matched[0], active: activeUser});
+});
+
+
 app.post('/timeline/', jsonParser, function(req, res) {
   var matched = [];
   var theID = req.body.click;

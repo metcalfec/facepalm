@@ -1,3 +1,5 @@
+var navbarHome = document.getElementById('nav-bar-home');
+var navbarProfile = document.getElementById('nav-bar-profile');
 var keywords = document.getElementById('keywords');
 var search = document.getElementById('search');
 var jumbo = document.getElementById('jumbo');
@@ -22,6 +24,53 @@ function clearPage(parent) {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+//Navbar Event Delegation
+////////////////////////////////////////////////////////////////////////////////
+navbarHome.addEventListener('click', function(event) {
+  event.preventDefault();
+  var click = event.target;
+  var clickID = click.getAttribute('data-id');
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/home/');
+  xhr.send();
+
+  xhr.addEventListener('load', function() {
+    clearPage(timeline);
+    clearPage(jumbo);
+    clearPage(friends);
+  })
+})
+
+navbarProfile.addEventListener('click', function(event) {
+  event.preventDefault();
+  var click = event.target;
+  var clickID = click.getAttribute('data-id');
+  var clickText = click.textContent;
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/profile/');
+  xhr.setRequestHeader('Content-type', 'application/json');
+  xhr.send(JSON.stringify({ID: clickID, text: clickText}));
+
+  xhr.addEventListener('load', function() {
+    var responseObject = JSON.parse(xhr.responseText);
+    clearPage(timeline);
+    clearPage(jumbo);
+    clearPage(friends);
+    var theTimeline = responseObject.matched.posts;
+    var active = responseObject.active;
+    var activeFriends = responseObject.active.friends;
+    var matched = responseObject.matched;
+    var matchedFriends = responseObject.matched.friends;
+    timeline.className = 'col-md-9';
+    showPosts(theTimeline);
+    friends.className = 'col-md-3 buffer';
+    showFriends(matchedFriends);
+    showJumbo(matched, active);
+
+  })
+})
+
+////////////////////////////////////////////////////////////////////////////////
 //Timeline Event Delegation
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -35,8 +84,7 @@ timeline.addEventListener('click', function(event) {
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({click: clickID, text: buttonText}));
 
-  xhr.addEventListener('load', function(event) {
-    event.preventDefault();
+  xhr.addEventListener('load', function() {
     console.log(clickID)
     var responseObject = JSON.parse(xhr.responseText);
     console.log(responseObject);
@@ -67,7 +115,6 @@ timeline.addEventListener('click', function(event) {
 ////////////////////////////////////////////////////////////////////////////////
 
 friends.addEventListener('click', function(event) {
-
   var click = event.target;
   var friendID = click.getAttribute('data-id');
   console.log(friendID)
@@ -86,11 +133,8 @@ friends.addEventListener('click', function(event) {
     var activeFriends = responseObject.active.friends;
     var matched = responseObject.matched;
     var matchedFriends = responseObject.matched.friends;
-
     timeline.className = 'col-md-9';
     showPosts(theTimeline);
-
-
     friends.className = 'col-md-3 buffer';
     showFriends(matchedFriends);
     showJumbo(matched, active);
@@ -178,16 +222,13 @@ search.addEventListener('submit', function(event) {
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
-
     var responseObject = JSON.parse(xhr.responseText);
     console.log(responseObject);
-
     if (responseObject.locate !== true) {
       jumbo.className = 'col-md-12';
       var noResults = document.createElement('p');
       noResults.className = 'no-results text-center';
       noResults.textContent = '\'' + responseObject.search + '\'' + ' was not found. Try searching for \'Ted Bell\'';
-
       jumbo.appendChild(noResults);
     }
     else {
@@ -197,11 +238,8 @@ search.addEventListener('submit', function(event) {
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
-
       timeline.className = 'col-md-9';
       showPosts(theTimeline, active);
-
-
       friends.className = 'col-md-3 buffer';
       showFriends(matchedFriends);
       showJumbo(matched, active);
@@ -228,7 +266,6 @@ function showJumbo(matched, active) {
   imageLg.className = 'user-img-lg img-thumbnail';
   imageLg.setAttribute('src', matched.image);
   imageLg.setAttribute('width', '150px');
-
 
   var name = document.createElement('h3');
   name.className = "user-name";
@@ -285,7 +322,6 @@ function showJumbo(matched, active) {
   var jumboPhotoLink = document.createElement('a');
   jumboPhotoLink.setAttribute('href', '#');
 
-
   var jumboLabelPhotos = document.createElement('p');
   jumboLabelPhotos.textContent = 'Photos'
   jumboLabelPhotos.className = 'jumbo-label-buffer'
@@ -314,16 +350,12 @@ function showJumbo(matched, active) {
   jumbo.appendChild(column);
 
   var myFriend = false;
-
   if (matched.name !== active.name) {
-
     var add = document.createElement('button');
     add.setAttribute('type', 'button');
     add.setAttribute('id', 'add-friend');
     add.setAttribute('data-id', matched.id);
     add.setAttribute('class', 'btn btn-primary add-remove');
-
-
     for (var i = 0; i < matched.friends.length; i++) {
       if (matched.friends[i].name === active.name) {
         myFriend = true;
@@ -337,7 +369,6 @@ function showJumbo(matched, active) {
       add.textContent = 'Add Friend';
       add.setAttribute('class', 'btn btn-primary add-remove');
     }
-
     addCol.appendChild(add);
   }
 }
@@ -345,7 +376,6 @@ function showJumbo(matched, active) {
 function showFriends(friend) {
   var panel = document.createElement('div');
   panel.className = 'panel panel-default';
-
   var panelBody = document.createElement('div');
   panelBody.className = 'panel-body bg-info';
   for (var i = 0; i < friend.length; i++) {
@@ -355,7 +385,6 @@ function showFriends(friend) {
     friendThumbnail.setAttribute('data-id', friend[i].id);
     friendThumbnail.setAttribute('class', 'img-thumbnail');
     friendThumbnail.setAttribute('width', '75px');
-
     panelBody.appendChild(friendThumbnail);
   }
   panel.appendChild(panelBody);
