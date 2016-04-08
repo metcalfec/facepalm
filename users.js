@@ -2403,7 +2403,7 @@ var users = [
       'http://cdn.playbuzz.com/cdn/1368dd74-b2eb-47fa-802e-8546673bb36b/9ea8c6e7-2575-4e42-8384-b2c4146624a3.jpg',
       'http://www.simplyrecipes.com/wp-content/uploads/2007/06/grilled-marinated-flank-steak-horiz-640.jpg',
       'http://cdn-maf1.heartyhosting.com/sites/muscleandfitness.com/files/styles/full_node_image_1090x614/public/Flank-Steak.jpg?itok=9HVtFg2a',
-      'http://leitesculinaria.com/wp-content/uploads/2013/06/grilled-flank-steak.jpg',
+      'http://d1doqjmisr497k.cloudfront.net/~/media/Recipe-Photos/McCormick/Main-Dishes/1007x545/Montreal-Peppered-Steak.ashx?vd=20130326T193028Z&hash',
       'http://www.thepauperedchef.com/images/2006/10/skirt_steak_13.jpg'
     ],
     image: 'images/ted-bell-profile.jpg',
