@@ -6,26 +6,14 @@ var jumbo = document.getElementById('jumbo');
 var timeline = document.getElementById('timeline');
 var friends = document.getElementById('friends');
 var currentUser = document.getElementById('current-user');
-var modalGrab = document.getElementsByClassName('attach-to-modal');
 var modal = document.getElementById('myModal');
-
-
 var activeUserFriends = [];
 var otherFriends = [];
-
-
-function clearPage(parent) {
-  if (parent) {
-    parent.className = "";
-    while (parent.firstChild) {
-      parent.removeChild(parent.firstChild);
-    }
-  }
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 //Navbar Event Delegation
 ////////////////////////////////////////////////////////////////////////////////
+
 navbarHome.addEventListener('click', function(event) {
   event.preventDefault();
   var click = event.target;
@@ -76,18 +64,16 @@ navbarProfile.addEventListener('click', function(event) {
 
 timeline.addEventListener('click', function(event) {
   event.preventDefault();
-  var theClick = event.target;
-  var clickID = theClick.getAttribute('data-id');
-  var buttonText = theClick.textContent;
+  var click = event.target;
+  var clickID = click.getAttribute('data-id');
+  var buttonText = click.textContent;
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/timeline/');
   xhr.setRequestHeader('Content-type', 'application/json');
   xhr.send(JSON.stringify({click: clickID, text: buttonText}));
 
   xhr.addEventListener('load', function() {
-    console.log(clickID)
     var responseObject = JSON.parse(xhr.responseText);
-    console.log(responseObject);
     if (responseObject.palm === true) {
       var userLiked = responseObject.userLiked;
       getPalmed(theClick, userLiked);
@@ -132,7 +118,6 @@ timeline.addEventListener('click', function(event) {
 friends.addEventListener('click', function(event) {
   var click = event.target;
   var friendID = click.getAttribute('data-id');
-  console.log(friendID)
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/view-friend/');
   xhr.setRequestHeader('Content-type', 'application/json');
@@ -172,7 +157,6 @@ jumbo.addEventListener('click', function(event) {
 
   xhr.addEventListener('load', function() {
     var responseObject = JSON.parse(xhr.responseText);
-    console.log(responseObject)
     var unfriend = document.getElementsByTagName('button');
     if (responseObject.targetClick === 'Photos') {
       clearPage(friends);
@@ -188,12 +172,10 @@ jumbo.addEventListener('click', function(event) {
       back.setAttribute('data-id', responseObject.profile.id)
       back.className = 'back-to-profile';
       var hr = document.createElement('hr');
-
       timeline.appendChild(title);
       link.appendChild(back);
       timeline.appendChild(link);
       timeline.appendChild(hr);
-
       if (responseObject.activeUser === true) {
         showPhotos(responseObject.photos);
       }
@@ -205,9 +187,7 @@ jumbo.addEventListener('click', function(event) {
     if (responseObject.friends === true) {
       clearPage(friends);
       friends.className = 'col-md-3 buffer';
-
       showFriends(responseObject.targetFriends);
-
       if (unfriend[1].textContent === 'Add Friend') {
         unfriend[1].textContent = 'Kill Friend';
         unfriend[1].className = 'btn btn-danger add-remove';
@@ -219,7 +199,6 @@ jumbo.addEventListener('click', function(event) {
     }
   });
 });
-
 
 ////////////////////////////////////////////////////////////////////////////////
 //Search and View Users
@@ -238,7 +217,6 @@ search.addEventListener('submit', function(event) {
     clearPage(jumbo);
     clearPage(friends);
     var responseObject = JSON.parse(xhr.responseText);
-    console.log(responseObject);
     if (responseObject.locate !== true) {
       jumbo.className = 'col-md-12';
       var noResults = document.createElement('p');
@@ -248,7 +226,6 @@ search.addEventListener('submit', function(event) {
     }
     else {
       var theTimeline = responseObject.matched.posts;
-      console.log(theTimeline)
       var active = responseObject.active;
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
@@ -263,8 +240,8 @@ search.addEventListener('submit', function(event) {
   });
 });
 
-function showJumbo(matched, active) {
 
+function showJumbo(matched, active) {
   var column = document.createElement('div');
   column.className = 'col-md-12';
 
@@ -430,14 +407,12 @@ function showPhotos(photo) {
 
 function getPalmed(button, likes) {
   var parent = button.parentElement;
-  console.log(button.name);
   if (button.name === 'palm' && button.textContent === 'Palm') {
     for (var i = 0; i < likes.length; i++) {
       var palmContributor = document.createElement('img');
       palmContributor.className = 'palm-contributor';
       palmContributor.setAttribute('src', likes[i].image);
       palmContributor.setAttribute('width', '40px');
-
       parent.appendChild(palmContributor);
     }
     button.textContent = 'UnPalm'
@@ -491,46 +466,11 @@ function showPosts(post, active) {
     var panelFooter = document.createElement('div');
     panelFooter.setAttribute('class', 'panel-footer');
 
-    // for (var j = 0; j < post[i].userLiked.length; j++) {
-    //   if (post[i].userLiked[j].name === active.name) {
-    //     console.log('treu')
-    //   }
-    // }
-    // if (post[i])
-      var palm = document.createElement('a');
-      palm.setAttribute('href', '#');
-      palm.setAttribute('name', 'palm');
-      palm.setAttribute('data-id', post[i].postID)
-      palm.textContent = 'Palm';
-
-    // if (post[i].likes != 0) {
-    //   for (var x = 0; x < post[i].userLiked.length; x++) {
-    //     var palmContributor = document.createElement('img');
-    //     palmContributor.className = 'palm-contributor';
-    //     palmContributor.setAttribute('src', post[i].userLiked[x].image);
-    //     palmContributor.setAttribute('width', '40px');
-    //     panelFooter.appendChild(palmContributor);
-    //     console.log(post[i].userLiked[x].image)
-    //   }
-    // }
-    //   if (button.name === 'palm' && button.textContent === 'Palm') {
-    //     for (var i = 0; i < likes.length; i++) {
-    //       var palmContributor = document.createElement('img');
-    //       palmContributor.className = 'palm-contributor';
-    //       palmContributor.setAttribute('src', likes[i].image);
-    //       palmContributor.setAttribute('width', '40px');
-    //
-    //       parent.appendChild(palmContributor);
-    //     }
-    //     button.textContent = 'UnPalm'
-    //   }
-    //   else if (button.name === 'palm' && button.textContent === 'UnPalm') {
-    //     button.textContent = 'Palm';
-    //     var child = document.getElementsByClassName('palm-contributor');
-    //     parent.removeChild(child[0]);
-    //   }
-    // }
-
+    var palm = document.createElement('a');
+    palm.setAttribute('href', '#');
+    palm.setAttribute('name', 'palm');
+    palm.setAttribute('data-id', post[i].postID)
+    palm.textContent = 'Palm';
 
     linkName.appendChild(poster);
     mediaBody.appendChild(linkName);
@@ -557,4 +497,13 @@ function titleCase(name) {
     });
   }
   return nameArray.join(' ');
+}
+
+function clearPage(parent) {
+  if (parent) {
+    parent.className = "";
+    while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+    }
+  }
 }
