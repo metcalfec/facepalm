@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var jsonParser = bodyParser.json();
-var users = require('./users.js')
+var users = require('./users.js');
 var port = process.env.PORT || 1337;
 
 var activeUser = users[2];
@@ -12,6 +12,7 @@ app.use(express.static('./public/'));
 
 
 app.post('/timeline/', jsonParser, function(req, res) {
+  var matched = [];
   var theID = req.body.click;
   var theText = req.body.text;
   var theUser = {
@@ -19,44 +20,68 @@ app.post('/timeline/', jsonParser, function(req, res) {
     image: activeUser.image,
     id: activeUser.id
   };
-  console.log(theText)
-  if (theText === 'Palm') {
-    for (var i = 0; i < users.length; i++) {
-      for (var x = 0; x < users[i].posts.length; x++) {
-        if (parseInt(theID) === users[i].posts[x].postID) {
-          users[i].posts[x].userLiked.push(theUser);
-          var likes = users[i].posts[x].userLiked.length;
-          var userLiked = users[i].posts[x].userLiked;
+  if (theID != null) {
+    if (theText === 'Palm') {
+      for (var i = 0; i < users.length; i++) {
+        for (var x = 0; x < users[i].posts.length; x++) {
+          if (parseInt(theID) === users[i].posts[x].postID) {
+            users[i].posts[x].userLiked.push(theUser);
+            var likes = users[i].posts[x].userLiked.length;
+            var userLiked = users[i].posts[x].userLiked;
+          }
         }
       }
+      res.json({likes: likes, userLiked: userLiked, palm: true})
+      console.log({likes: likes, userLiked: userLiked});
     }
-    res.json({likes: likes, userLiked: userLiked})
-    console.log({likes: likes, userLiked: userLiked});
-  }
-  else {
-    for (var i = 0; i < users.length; i++) {
-      for (var x = 0; x < users[i].posts.length; x++) {
-        if (parseInt(theID) === users[i].posts[x].postID) {
-          users[i].posts[x].userLiked.pop(theUser);
-          var likes = users[i].posts[x].userLiked.length;
-          var userLiked = users[i].posts[x].userLiked;
+    else if (theText === 'UnPalm') {
+      for (var i = 0; i < users.length; i++) {
+        for (var x = 0; x < users[i].posts.length; x++) {
+          if (parseInt(theID) === users[i].posts[x].postID) {
+            users[i].posts[x].userLiked.pop(theUser);
+            var likes = users[i].posts[x].userLiked.length;
+            var userLiked = users[i].posts[x].userLiked;
+          }
         }
       }
+      res.json({likes: likes, userLiked: userLiked, palm: true})
+      console.log({likes: likes, userLiked: userLiked});
     }
-    res.json({likes: likes, userLiked: userLiked})
-    console.log({likes: likes, userLiked: userLiked});
+    else {
+      console.log('yoyo ' + theText)
+      for (var p = 0; p < users.length; p++) {
+        if (theID == users[p].id) {
+          matched.push(users[p])
+        }
+      }
+      console.log('matched: ' + matched)
+      res.json({matched: matched[0], active: activeUser});
+    }
   }
+  // else if (theID){
+  //   for (var i = 0; i < users.length; i++) {
+  //     if (parseInt(theID) === users[i].id) {
+  //       matched.push(users[i])
+  //     }
+  //   }
+  //   console.log(matched.indexOf(0))
+  //   if (matched.indexOf(0) !== -1) {
+  //     res.json({matched: matched[0], active: activeUser, travel: true, palm: false})
+  //   }
+  // }
 })
 
 app.post('/view-friend/', jsonParser, function(req, res) {
   var matched = [];
-  for (var i = 0; i< users.length; i++) {
-    if (req.body.friend == users[i].id ) {
-      matched.push(users[i]);
+  if (req.body.friend != null) {
+    for (var i = 0; i< users.length; i++) {
+      if (req.body.friend == users[i].id ) {
+        matched.push(users[i]);
+      }
     }
+    console.log(matched[0]);
+    res.json({matched: matched[0], active: activeUser});
   }
-  console.log(matched[0]);
-  res.json({matched: matched[0], active: activeUser});
 });
 
 app.post('/add-friend/', jsonParser, function(req, res) {
@@ -81,9 +106,17 @@ app.post('/add-friend/', jsonParser, function(req, res) {
 
   if (req.body.text === 'Photos') {
     for (var i = 0; i < users.length; i++) {
-      var friendPhotos = users[i].photos
+      if (req.body.button == users[i].id) {
+        var friendPhotos = users[i].photos;
+        var friend = users[i];
+      }
     }
-    res.json({targetClick: 'Photos', photos: friendPhotos, friends: false});
+    if (friend === activeUser) {
+      res.json({targetClick: 'Photos', photos: friendPhotos, friends: false, activeUser: true});
+    }
+    else {
+      res.json({targetClick: 'Photos', photos: friendPhotos, friends: false, activeUser: false});
+    }
   }
   else if (req.body.text === 'Kill Friend') {
     for (var i = 0; i < friendInQuestion.friends.length; i++) {

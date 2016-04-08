@@ -4,6 +4,8 @@ var jumbo = document.getElementById('jumbo');
 var timeline = document.getElementById('timeline');
 var friends = document.getElementById('friends');
 var currentUser = document.getElementById('current-user');
+var modalGrab = document.getElementsByClassName('attach-to-modal');
+var modal = document.getElementById('myModal');
 
 
 var activeUserFriends = [];
@@ -19,6 +21,9 @@ function clearPage(parent) {
   }
 }
 
+////////////////////////////////////////////////////////////////////////////////
+//Timeline Event Delegation
+////////////////////////////////////////////////////////////////////////////////
 
 timeline.addEventListener('click', function(event) {
   event.preventDefault();
@@ -32,23 +37,40 @@ timeline.addEventListener('click', function(event) {
 
   xhr.addEventListener('load', function(event) {
     event.preventDefault();
-    console.log(theClick)
-    var allLikes = event.target.parentNode;
+    console.log(clickID)
     var responseObject = JSON.parse(xhr.responseText);
-    var userLiked = responseObject.userLiked;
-    console.log(userLiked)
     console.log(responseObject);
-    getPalmed(theClick, userLiked);
-
-
+    if (responseObject.palm === true) {
+      var userLiked = responseObject.userLiked;
+      getPalmed(theClick, userLiked);
+    }
+    else {
+      clearPage(timeline);
+      clearPage(jumbo);
+      clearPage(friends);
+      var theTimeline = responseObject.matched.posts;
+      var active = responseObject.active;
+      var activeFriends = responseObject.active.friends;
+      var matched = responseObject.matched;
+      var matchedFriends = responseObject.matched.friends;
+      timeline.className = 'col-md-9';
+      showPosts(theTimeline);
+      friends.className = 'col-md-3 buffer';
+      showFriends(matchedFriends);
+      showJumbo(matched, active);
+    }
   });
 });
 
-//////////
+////////////////////////////////////////////////////////////////////////////////
+//Friends Event Delegation
+////////////////////////////////////////////////////////////////////////////////
+
 friends.addEventListener('click', function(event) {
-  event.preventDefault();
+
   var click = event.target;
   var friendID = click.getAttribute('data-id');
+  console.log(friendID)
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/view-friend/');
   xhr.setRequestHeader('Content-type', 'application/json');
@@ -96,15 +118,30 @@ jumbo.addEventListener('click', function(event) {
     if (responseObject.targetClick === 'Photos') {
       clearPage(friends);
       clearPage(timeline);
-      timeline.className = 'col-md-10 col-md-offset-1';
+      timeline.className = 'col-md-12';
+      var imageModal = document.createElement('img');
+      imageModal.setAttribute('data-dismiss', 'modal');
+      imageModal.setAttribute('src', 'http://keystoneaviation.com/wp-content/uploads/2013/10/1289852453_1.jpg');
+      imageModal.className = 'to-front';
+      modalGrab[0].appendChild(imageModal);
+      // <img data-dismiss="modal" src="http://keystoneaviation.com/wp-content/uploads/2013/10/1289852453_1.jpg">
+
+
+
+
       var title = document.createElement('h1');
       title.textContent = 'Photos';
       title.className = 'title-photo';
       var hr = document.createElement('hr');
       timeline.appendChild(title);
       timeline.appendChild(hr);
-      unfriend[1].className = 'hide';
-      showPhotos(responseObject.photos);
+      if (responseObject.activeUser === true) {
+        showPhotos(responseObject.photos);
+      }
+      else {
+        unfriend[1].className = 'hide';
+        showPhotos(responseObject.photos);
+      }
     }
     if (responseObject.friends === true) {
       clearPage(friends);
@@ -135,7 +172,7 @@ search.addEventListener('submit', function(event) {
   var xhr = new XMLHttpRequest();
   xhr.open('POST', '/search/');
   xhr.setRequestHeader('Content-type', 'application/json');
-  xhr.send(JSON.stringify({search: keywords.value}));
+  xhr.send(JSON.stringify({search: keywords.value.toLowerCase()}));
 
   xhr.addEventListener('load', function() {
     clearPage(timeline);
@@ -146,9 +183,6 @@ search.addEventListener('submit', function(event) {
     console.log(responseObject);
 
     if (responseObject.locate !== true) {
-      clearPage(timeline);
-      clearPage(jumbo);
-      clearPage(friends);
       jumbo.className = 'col-md-12';
       var noResults = document.createElement('p');
       noResults.className = 'no-results text-center';
@@ -158,13 +192,14 @@ search.addEventListener('submit', function(event) {
     }
     else {
       var theTimeline = responseObject.matched.posts;
+      console.log(theTimeline)
       var active = responseObject.active;
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
 
       timeline.className = 'col-md-9';
-      showPosts(theTimeline);
+      showPosts(theTimeline, active);
 
 
       friends.className = 'col-md-3 buffer';
@@ -194,9 +229,10 @@ function showJumbo(matched, active) {
   imageLg.setAttribute('src', matched.image);
   imageLg.setAttribute('width', '150px');
 
+
   var name = document.createElement('h3');
   name.className = "user-name";
-  name.textContent = matched.name;
+  name.textContent = titleCase(matched.name);;
 
   var panelBody = document.createElement('div');
   panelBody.className = 'panel-body bg-info buffer-sm';
@@ -212,16 +248,22 @@ function showJumbo(matched, active) {
   var ListTwo = document.createElement('li');
   ListTwo.textContent = matched.about[1];
 
+  var ListThree = document.createElement('li');
+  ListThree.textContent = matched.about[2];
+
+  var ListFour = document.createElement('li');
+  ListFour.textContent = matched.about[3];
+
   var photoCol = document.createElement('div');
   photoCol.className = 'col-md-2 col-md-offset-1';
 
   for (var i = 6; i < matched.photos.length && i > 0; i--) {
+    var photoDiv = document.createElement('div');
+    photoDiv.className = 'thumb-preview';
     var photo = document.createElement('img');
     photo.setAttribute('src', matched.photos[i]);
-    photo.setAttribute('class', 'img-thumbnail');
-    photo.setAttribute('width', '40px');
-
-    photoCol.appendChild(photo)
+    photoDiv.appendChild(photo);
+    photoCol.appendChild(photoDiv);
   }
 
   var addCol = document.createElement('div');
@@ -247,11 +289,13 @@ function showJumbo(matched, active) {
   var jumboLabelPhotos = document.createElement('p');
   jumboLabelPhotos.textContent = 'Photos'
   jumboLabelPhotos.className = 'jumbo-label-buffer'
-  jumboLabelPhotos.setAttribute('data-id', 'photos');
+  jumboLabelPhotos.setAttribute('data-id', matched.id);
 
   column.appendChild(banner);
   aboutUl.appendChild(ListOne);
   aboutUl.appendChild(ListTwo);
+  aboutUl.appendChild(ListThree);
+  aboutUl.appendChild(ListFour);
   aboutCol.appendChild(aboutUl);
   panelBody.appendChild(aboutCol);
   panelBody.appendChild(photoCol)
@@ -299,31 +343,40 @@ function showJumbo(matched, active) {
 }
 
 function showFriends(friend) {
+  var panel = document.createElement('div');
+  panel.className = 'panel panel-default';
+
+  var panelBody = document.createElement('div');
+  panelBody.className = 'panel-body bg-info';
   for (var i = 0; i < friend.length; i++) {
     var friendThumbnail = document.createElement('img');
     friendThumbnail.setAttribute('src', friend[i].image);
     friendThumbnail.setAttribute('alt', friend[i].name);
     friendThumbnail.setAttribute('data-id', friend[i].id);
     friendThumbnail.setAttribute('class', 'img-thumbnail');
-    friendThumbnail.setAttribute('width', '84px');
+    friendThumbnail.setAttribute('width', '75px');
 
-    friends.appendChild(friendThumbnail);
+    panelBody.appendChild(friendThumbnail);
   }
+  panel.appendChild(panelBody);
+  friends.appendChild(panel)
 }
 
 function showPhotos(photo) {
-  for (var i = 1; i < photo.length; i++) {
+  for (var i = 0; i < photo.length; i++) {
+    var thumbDiv = document.createElement('div');
+    thumbDiv.className = 'thumb';
+    var a = document.createElement('a');
+    a.setAttribute('href', '#');
+    a.setAttribute('data-toggle', 'modal');
+    a.setAttribute('data-target', '#myModal');
+    a.setAttribute('data-id', 1);
     var photoThumbnail = document.createElement('img');
     photoThumbnail.setAttribute('src', photo[i]);
-    photoThumbnail.setAttribute('class', 'img-thumbnail photo-thumbs');
-    photoThumbnail.setAttribute('width', '135px');
-    timeline.appendChild(photoThumbnail);
+    a.appendChild(photoThumbnail);
+    thumbDiv.appendChild(a);
+    modal.appendChild(thumbDiv);
   }
-  var defaultPhoto = document.createElement('img');
-  defaultPhoto.setAttribute('src', photo[0]);
-  defaultPhoto.setAttribute('class', 'img-thumbnail');
-  defaultPhoto.setAttribute('width', '810px');
-  timeline.appendChild(defaultPhoto);
 }
 
 function getPalmed(button, likes) {
@@ -347,8 +400,7 @@ function getPalmed(button, likes) {
   }
 }
 
-
-function showPosts(post) {
+function showPosts(post, active) {
   for (var i = 0; i < post.length; i++) {
     var panel = document.createElement('div');
     panel.setAttribute('class', 'panel panel-default buffer');
@@ -368,6 +420,7 @@ function showPosts(post) {
     var userImage = document.createElement('img');
     userImage.className = 'media-object';
     userImage.setAttribute('src', post[i].thumbnail);
+    userImage.setAttribute('data-id', post[i].posterID);
     userImage.setAttribute('width', '45px');
 
     var mediaBody = document.createElement('div');
@@ -378,7 +431,8 @@ function showPosts(post) {
 
     var poster = document.createElement('h5');
     poster.setAttribute('class', 'media-heading');
-    poster.textContent = post[i].poster;
+    poster.setAttribute('data-id', post[i].posterID);
+    poster.textContent = titleCase(post[i].poster);
 
     var hr = document.createElement('hr');
 
@@ -388,11 +442,46 @@ function showPosts(post) {
     var panelFooter = document.createElement('div');
     panelFooter.setAttribute('class', 'panel-footer');
 
-    var palm = document.createElement('a');
-    palm.setAttribute('href', '#');
-    palm.setAttribute('name', 'palm');
-    palm.setAttribute('data-id', post[i].postID)
-    palm.textContent = 'Palm';
+    // for (var j = 0; j < post[i].userLiked.length; j++) {
+    //   if (post[i].userLiked[j].name === active.name) {
+    //     console.log('treu')
+    //   }
+    // }
+    // if (post[i])
+      var palm = document.createElement('a');
+      palm.setAttribute('href', '#');
+      palm.setAttribute('name', 'palm');
+      palm.setAttribute('data-id', post[i].postID)
+      palm.textContent = 'Palm';
+
+    // if (post[i].likes != 0) {
+    //   for (var x = 0; x < post[i].userLiked.length; x++) {
+    //     var palmContributor = document.createElement('img');
+    //     palmContributor.className = 'palm-contributor';
+    //     palmContributor.setAttribute('src', post[i].userLiked[x].image);
+    //     palmContributor.setAttribute('width', '40px');
+    //     panelFooter.appendChild(palmContributor);
+    //     console.log(post[i].userLiked[x].image)
+    //   }
+    // }
+    //   if (button.name === 'palm' && button.textContent === 'Palm') {
+    //     for (var i = 0; i < likes.length; i++) {
+    //       var palmContributor = document.createElement('img');
+    //       palmContributor.className = 'palm-contributor';
+    //       palmContributor.setAttribute('src', likes[i].image);
+    //       palmContributor.setAttribute('width', '40px');
+    //
+    //       parent.appendChild(palmContributor);
+    //     }
+    //     button.textContent = 'UnPalm'
+    //   }
+    //   else if (button.name === 'palm' && button.textContent === 'UnPalm') {
+    //     button.textContent = 'Palm';
+    //     var child = document.getElementsByClassName('palm-contributor');
+    //     parent.removeChild(child[0]);
+    //   }
+    // }
+
 
     linkName.appendChild(poster);
     mediaBody.appendChild(linkName);
@@ -408,4 +497,15 @@ function showPosts(post) {
     panel.appendChild(panelFooter);
     timeline.appendChild(panel);
   }
+}
+
+function titleCase(name) {
+  var nameArray = name.toLowerCase().split(' ');
+  for (var i = 0; i < nameArray.length; i++) {
+    var x = nameArray[i].charAt(0);
+    nameArray[i] = nameArray[i].replace(nameArray[i].charAt(0), function replace(x) {
+      return x.toUpperCase();
+    });
+  }
+  return nameArray.join(' ');
 }
