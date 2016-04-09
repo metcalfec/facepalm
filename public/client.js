@@ -24,6 +24,7 @@ navbarHome.addEventListener('click', function(event) {
   xhr.send();
 
   xhr.addEventListener('load', function() {
+    window.scroll(0, 0);
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
@@ -48,6 +49,7 @@ navbarProfile.addEventListener('click', function(event) {
   xhr.send(JSON.stringify({ID: clickID, text: clickText}));
 
   xhr.addEventListener('load', function() {
+    window.scroll(0, 0);
     var responseObject = JSON.parse(xhr.responseText);
     clearPage(timeline);
     clearPage(jumbo);
@@ -88,6 +90,7 @@ timeline.addEventListener('click', function(event) {
       getPalmed(click, userLiked);
     }
     else if (responseObject.back === true) {
+      window.scroll(0, 0);
       clearPage(timeline);
       clearPage(jumbo);
       clearPage(friends);
@@ -103,6 +106,7 @@ timeline.addEventListener('click', function(event) {
       showJumbo(matched, active);
     }
     else {
+      window.scroll(0, 0);
       clearPage(timeline);
       clearPage(jumbo);
       clearPage(friends);
@@ -133,6 +137,7 @@ friends.addEventListener('click', function(event) {
   xhr.send(JSON.stringify({friend: friendID}));
 
   xhr.addEventListener('load', function() {
+    window.scroll(0, 0);
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
@@ -168,6 +173,7 @@ jumbo.addEventListener('click', function(event) {
     var responseObject = JSON.parse(xhr.responseText);
     var unfriend = document.getElementsByTagName('button');
     if (responseObject.targetClick === 'Photos') {
+      window.scroll(0, 550);
       clearPage(friends);
       clearPage(timeline);
       timeline.className = 'col-md-12';
@@ -223,6 +229,7 @@ search.addEventListener('submit', function(event) {
   xhr.send(JSON.stringify({search: keywords.value.toLowerCase()}));
 
   xhr.addEventListener('load', function() {
+    window.scroll(0, 0);
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
