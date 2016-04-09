@@ -6,7 +6,8 @@ var jumbo = document.getElementById('jumbo');
 var timeline = document.getElementById('timeline');
 var friends = document.getElementById('friends');
 var currentUser = document.getElementById('current-user');
-var modal = document.getElementById('myModal');
+var map = document.getElementsByClassName('map-preview');
+var home = document.getElementById('home');
 var activeUserFriends = [];
 var otherFriends = [];
 
@@ -26,6 +27,13 @@ navbarHome.addEventListener('click', function(event) {
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
+    clearPage(home);
+    var landing = document.createElement('img');
+    landing.setAttribute('src', 'images/face-palm-cover.jpg');
+    landing.setAttribute('width', '100%');
+    friends.className = 'buffer';
+    home.className = '';
+    home.appendChild(landing);
   })
 })
 
@@ -44,6 +52,7 @@ navbarProfile.addEventListener('click', function(event) {
     clearPage(timeline);
     clearPage(jumbo);
     clearPage(friends);
+    home.className = 'hide';
     var theTimeline = responseObject.matched.posts;
     var active = responseObject.active;
     var activeFriends = responseObject.active.friends;
@@ -181,6 +190,7 @@ jumbo.addEventListener('click', function(event) {
       }
       else {
         unfriend[1].className = 'hide';
+        map[0].className = 'map-preview-shift';
         showPhotos(responseObject.photos);
       }
     }
@@ -218,13 +228,20 @@ search.addEventListener('submit', function(event) {
     clearPage(friends);
     var responseObject = JSON.parse(xhr.responseText);
     if (responseObject.locate !== true) {
-      jumbo.className = 'col-md-12';
+      clearPage(home);
+      var landing = document.createElement('img');
+      landing.setAttribute('src', 'images/face-palm-cover.jpg');
+      landing.setAttribute('width', '100%');
       var noResults = document.createElement('p');
       noResults.className = 'no-results text-center';
       noResults.textContent = '\'' + responseObject.search + '\'' + ' was not found. Try searching for \'Ted Bell\'';
-      jumbo.appendChild(noResults);
+      friends.className = 'buffer';
+      home.className = '';
+      home.appendChild(landing);
+      home.appendChild(noResults);
     }
     else {
+      home.className = 'hide';
       var theTimeline = responseObject.matched.posts;
       var active = responseObject.active;
       var activeFriends = responseObject.active.friends;
@@ -324,29 +341,29 @@ function showJumbo(matched, active) {
   jumboFooter.className = 'panel-body footer-sm';
 
   var jumboLabelAboutCol = document.createElement('div');
-  jumboLabelAboutCol.className = 'col-md-4 col-md-offset-1'
+  jumboLabelAboutCol.className = 'col-md-4 col-md-offset-1';
 
   var jumboLabelAbout = document.createElement('p');
-  jumboLabelAbout.textContent = 'About'
-  jumboLabelAbout.className = 'jumbo-label-buffer jumbo-about-buffer'
+  jumboLabelAbout.textContent = 'About';
+  jumboLabelAbout.className = 'jumbo-label-buffer jumbo-about-buffer';
 
   var jumboLabelPhotosCol = document.createElement('div');
-  jumboLabelPhotosCol.className = 'col-md-2'
+  jumboLabelPhotosCol.className = 'col-md-2';
 
   var jumboPhotoLink = document.createElement('a');
   jumboPhotoLink.setAttribute('href', '#');
 
   var jumboLabelPhotos = document.createElement('p');
-  jumboLabelPhotos.textContent = 'Photos'
-  jumboLabelPhotos.className = 'jumbo-label-buffer'
+  jumboLabelPhotos.textContent = 'Photos';
+  jumboLabelPhotos.className = 'jumbo-label-buffer';
   jumboLabelPhotos.setAttribute('data-id', matched.id);
 
   var jumboLabelMapCol = document.createElement('div');
-  jumboLabelMapCol.className = 'col-md-4'
+  jumboLabelMapCol.className = 'col-md-4';
 
   var jumboLabelMap = document.createElement('p');
-  jumboLabelMap.textContent = 'Map'
-  jumboLabelMap.className = 'jumbo-label-buffer jumbo-map-buffer'
+  jumboLabelMap.textContent = 'Map';
+  jumboLabelMap.className = 'jumbo-label-buffer jumbo-map-buffer';
 
   column.appendChild(banner);
   aboutUl.appendChild(ListOne);
@@ -502,7 +519,7 @@ function showPosts(post, active) {
     var palm = document.createElement('a');
     palm.setAttribute('href', '#');
     palm.setAttribute('name', 'palm');
-    palm.setAttribute('data-id', post[i].postID)
+    palm.setAttribute('data-id', post[i].postID);
     palm.textContent = 'Palm';
 
     linkName.appendChild(poster);

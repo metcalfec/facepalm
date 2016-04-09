@@ -1,14 +1,18 @@
-.test2 {
-  font-size: 80px;
-}
-
-.temp-color {
+.logo {
   color: white;
   font-size: 30px;
 }
 
 .search-buffer {
   margin-top: 8px;
+}
+
+.center-me {
+  margin-left: -70px;
+}
+
+.input-group {
+  text-align: center;
 }
 
 .nav-user-name {
@@ -59,7 +63,7 @@
 }
 
 .no-results {
-  margin-top: 100px;
+  margin-top: -690px;
   font-size: 20px
 }
 
@@ -192,4 +196,8 @@
   width: 180px;
   height: 85px;
   overflow: hidden;
+}
+
+#home {
+  position: fixed;
 }

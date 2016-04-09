@@ -23,12 +23,15 @@ app.get('/home/', function(req, res) {
 
 app.post('/profile/', jsonParser, function(req, res) {
   var matched = [];
-  for (var i = 0; i < users.length; i++) {
-    if (users[i].id == req.body.ID) {
-      matched.push(users[i]);
+  console.log(req.body.ID)
+  if (req.body.ID != null) {
+    for (var i = 0; i < users.length; i++) {
+      if (users[i].id == req.body.ID) {
+        matched.push(users[i]);
+      }
     }
+    res.json({matched: matched[0], active: activeUser});
   }
-  res.json({matched: matched[0], active: activeUser});
 });
 
 ///////////////////////////////////////////////////////////////////////////////////////////
