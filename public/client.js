@@ -200,7 +200,7 @@ jumbo.addEventListener('click', function(event) {
         showPhotos(responseObject.photos);
       }
     }
-    if (responseObject.friends === true) {
+    else if (responseObject.friends === true) {
       clearPage(friends);
       friends.className = 'col-md-3 buffer';
       showFriends(responseObject.targetFriends);
@@ -260,7 +260,6 @@ search.addEventListener('submit', function(event) {
       showFriends(matchedFriends);
       showJumbo(matched, active);
     }
-
   });
 });
 
@@ -318,7 +317,6 @@ function showJumbo(matched, active) {
     photoDiv.appendChild(photo);
     photoCol.appendChild(photoDiv);
   }
-
   if (matched.name == active.name) {
     var mapCol = document.createElement('div');
     mapCol.className = 'col-md-2 col-md-offset-2';
@@ -329,7 +327,6 @@ function showJumbo(matched, active) {
     var map = document.createElement('img');
     map.setAttribute('src', matched.map);
   }
-
   else {
     var mapCol = document.createElement('div');
     mapCol.className = 'col-md-2 col-md-offset-2';
@@ -340,7 +337,6 @@ function showJumbo(matched, active) {
     var map = document.createElement('img');
     map.setAttribute('src', matched.map);
   }
-
   var addCol = document.createElement('div');
   addCol.className = 'col-md-2 col-md-offset-3';
 
