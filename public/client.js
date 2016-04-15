@@ -60,9 +60,9 @@ navbarProfile.addEventListener('click', function(event) {
     var activeFriends = responseObject.active.friends;
     var matched = responseObject.matched;
     var matchedFriends = responseObject.matched.friends;
-    timeline.className = 'col-md-9';
+    timeline.className = 'col-xs-7 col-sm-7 col-md-8';
     showPosts(theTimeline);
-    friends.className = 'col-md-3 buffer';
+    friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
     showFriends(matchedFriends);
     showJumbo(matched, active);
 
@@ -99,9 +99,9 @@ timeline.addEventListener('click', function(event) {
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
-      timeline.className = 'col-md-9';
+      timeline.className = 'col-xs-7 col-sm-7 col-md-8';
       showPosts(theTimeline);
-      friends.className = 'col-md-3 buffer';
+      friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
       showFriends(matchedFriends);
       showJumbo(matched, active);
     }
@@ -115,9 +115,9 @@ timeline.addEventListener('click', function(event) {
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
-      timeline.className = 'col-md-9';
+      timeline.className = 'col-xs-7 col-sm-7 col-md-8';
       showPosts(theTimeline);
-      friends.className = 'col-md-3 buffer';
+      friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
       showFriends(matchedFriends);
       showJumbo(matched, active);
     }
@@ -147,9 +147,9 @@ friends.addEventListener('click', function(event) {
     var activeFriends = responseObject.active.friends;
     var matched = responseObject.matched;
     var matchedFriends = responseObject.matched.friends;
-    timeline.className = 'col-md-9';
+    timeline.className = 'col-xs-7 col-sm-7 col-md-8';
     showPosts(theTimeline);
-    friends.className = 'col-md-3 buffer';
+    friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
     showFriends(matchedFriends);
     showJumbo(matched, active);
   });
@@ -191,18 +191,11 @@ jumbo.addEventListener('click', function(event) {
       link.appendChild(back);
       timeline.appendChild(link);
       timeline.appendChild(hr);
-      if (responseObject.activeUser === true) {
-        showPhotos(responseObject.photos);
-      }
-      else {
-        unfriend[1].className = 'hide';
-        map[0].className = 'map-preview-shift';
-        showPhotos(responseObject.photos);
-      }
+      showPhotos(responseObject.photos);
     }
     else if (responseObject.friends === true) {
       clearPage(friends);
-      friends.className = 'col-md-3 buffer';
+      friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
       showFriends(responseObject.targetFriends);
       if (unfriend[1].textContent === 'Add Friend') {
         unfriend[1].textContent = 'Kill Friend';
@@ -254,9 +247,9 @@ search.addEventListener('submit', function(event) {
       var activeFriends = responseObject.active.friends;
       var matched = responseObject.matched;
       var matchedFriends = responseObject.matched.friends;
-      timeline.className = 'col-md-9';
-      showPosts(theTimeline, active);
-      friends.className = 'col-md-3 buffer';
+      timeline.className = 'col-xs-7 col-sm-7 col-md-8';
+      showPosts(theTimeline);
+      friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
       showFriends(matchedFriends);
       showJumbo(matched, active);
     }
@@ -266,7 +259,7 @@ search.addEventListener('submit', function(event) {
 
 function showJumbo(matched, active) {
   var column = document.createElement('div');
-  column.className = 'col-md-12';
+  column.className = 'col-md-12 col-sm-12 col-xs-12';
 
   var banner = document.createElement('img');
   banner.className = 'timeline-photo';
@@ -290,7 +283,7 @@ function showJumbo(matched, active) {
   panelBody.className = 'panel-body bg-info buffer-sm';
 
   var  aboutCol = document.createElement('div');
-  aboutCol.className = 'col-md-4';
+  aboutCol.className = 'col-xs-5 col-sm-5 col-md-5';
 
   var aboutUl = document.createElement('ul');
 
@@ -307,7 +300,7 @@ function showJumbo(matched, active) {
   ListFour.textContent = matched.about[3];
 
   var photoCol = document.createElement('div');
-  photoCol.className = 'col-md-2 col-md-offset-1';
+  photoCol.className = 'col-xs-3 col-sm-3 col-md-2';
 
   for (var i = 6; i < matched.photos.length && i > 0; i--) {
     var photoDiv = document.createElement('div');
@@ -317,41 +310,30 @@ function showJumbo(matched, active) {
     photoDiv.appendChild(photo);
     photoCol.appendChild(photoDiv);
   }
-  if (matched.name == active.name) {
-    var mapCol = document.createElement('div');
-    mapCol.className = 'col-md-2 col-md-offset-2';
+  var mapCol = document.createElement('div');
+  mapCol.className = 'col-xs-2 col-sm-2 col-md-2 col-md-offset-2';
 
-    var mapDiv = document.createElement('div');
-    mapDiv.className = 'map-preview-shift';
+  var mapDiv = document.createElement('div');
+  mapDiv.className = 'map-preview-shift';
 
-    var map = document.createElement('img');
-    map.setAttribute('src', matched.map);
-  }
-  else {
-    var mapCol = document.createElement('div');
-    mapCol.className = 'col-md-2 col-md-offset-2';
+  var map = document.createElement('img');
+  map.setAttribute('src', matched.map);
 
-    var mapDiv = document.createElement('div');
-    mapDiv.className = 'map-preview';
-
-    var map = document.createElement('img');
-    map.setAttribute('src', matched.map);
-  }
   var addCol = document.createElement('div');
-  addCol.className = 'col-md-2 col-md-offset-3';
+  addCol.className = 'col-xs-2 col-xs-offset-10 col-sm-2 col-sm-offset-10 col-md-2 col-md-offset-10';
 
   var jumboFooter = document.createElement('div');
   jumboFooter.className = 'panel-body footer-sm';
 
   var jumboLabelAboutCol = document.createElement('div');
-  jumboLabelAboutCol.className = 'col-md-4 col-md-offset-1';
+  jumboLabelAboutCol.className = 'col-xs-3 col-sm- 3 col-md-3';
 
   var jumboLabelAbout = document.createElement('p');
   jumboLabelAbout.textContent = 'About';
   jumboLabelAbout.className = 'jumbo-label-buffer jumbo-about-buffer';
 
   var jumboLabelPhotosCol = document.createElement('div');
-  jumboLabelPhotosCol.className = 'col-md-2';
+  jumboLabelPhotosCol.className = 'col-xs-3 col-xs-offset-2 col-sm-3 col-sm-offset-2 col-md-4 col-md-offset-2';
 
   var jumboPhotoLink = document.createElement('a');
   jumboPhotoLink.setAttribute('href', '#');
@@ -362,7 +344,7 @@ function showJumbo(matched, active) {
   jumboLabelPhotos.setAttribute('data-id', matched.id);
 
   var jumboLabelMapCol = document.createElement('div');
-  jumboLabelMapCol.className = 'col-md-4';
+  jumboLabelMapCol.className = 'col-xs-2 col-sm-2 col-md-2';
 
   var jumboLabelMap = document.createElement('p');
   jumboLabelMap.textContent = 'Map';
@@ -378,8 +360,8 @@ function showJumbo(matched, active) {
   mapCol.appendChild(mapDiv);
   panelBody.appendChild(aboutCol);
   panelBody.appendChild(photoCol);
-  panelBody.appendChild(addCol);
   panelBody.appendChild(mapCol);
+  panelBody.appendChild(addCol);
   jumboLabelAboutCol.appendChild(jumboLabelAbout);
   jumboFooter.appendChild(jumboLabelAboutCol);
   jumboPhotoLink.appendChild(jumboLabelPhotos);
@@ -420,17 +402,20 @@ function showJumbo(matched, active) {
 
 function showFriends(friend) {
   var panel = document.createElement('div');
-  panel.className = 'panel panel-default';
+  panel.className = 'panel panel-default friends-backing';
   var panelBody = document.createElement('div');
   panelBody.className = 'panel-body bg-info';
   for (var i = 0; i < friend.length; i++) {
+    var photoLink = document.createElement('a');
+    photoLink.setAttribute('href', '#');
     var friendThumbnail = document.createElement('img');
     friendThumbnail.setAttribute('src', friend[i].image);
     friendThumbnail.setAttribute('alt', friend[i].name);
     friendThumbnail.setAttribute('data-id', friend[i].id);
     friendThumbnail.setAttribute('class', 'img-thumbnail');
     friendThumbnail.setAttribute('width', '75px');
-    panelBody.appendChild(friendThumbnail);
+    photoLink.appendChild(friendThumbnail);
+    panelBody.appendChild(photoLink);
   }
   panel.appendChild(panelBody);
   friends.appendChild(panel)
