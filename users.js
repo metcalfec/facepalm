@@ -4,8 +4,8 @@ var users = [
     name: 'art griego',
     about: [
       'Retired Pilot',
-      'Believes pilots need a drink to steady nerves',
-      'Wrote the book \'The Art of Control\'',
+      'Wrote  \'The Art of Control\'',
+      'Believes pilots need to drink',
       'Lives in Lancaster, CA'
 
     ],
@@ -227,7 +227,7 @@ var users = [
     id: 2,
     name: 'austin amarka',
     about: [
-      'Mechanic and gas station operator',
+      'Mechanic & gas station operator',
       'Part-time job as a cabinetmaker',
       'Dislikes the Harry Potter books',
       'Lives in Los Angeles, CA'
@@ -408,10 +408,10 @@ var users = [
     id: 3,
     name: 'bob bakian',
     about: [
-      'Flys the Phil Hendrie Show news helicopter',
-      'Sometimes works on Skippy & Frank\'s show',
-      'Teamed up with \'Sky Boy\' and \'Sky Baby\'',
-      'FLying somewhere over Los Angeles'
+      'Helicopter pilot',
+      'Does traffic for \'Skippy & Frank\'',
+      'Constantly gets lost',
+      'FLying somewhere over L.A.'
     ],
     friends: [
       {
@@ -561,8 +561,8 @@ var users = [
     id: 4,
     name: 'bob green',
     about: [
-      'Owner of Frazier Food',
-      'Thaws frozen turkeys and sells them as \'fresh\'',
+      'Owner of Frazier Foods',
+      'Sells frozen turkey as \'fresh\'',
       'Wears a $15,000 \'hair system\'',
       'Lives in Buena Park, CA'
     ],
@@ -744,8 +744,8 @@ var users = [
     about: [
       'President of Western Estates',
       'Runs the \'Fall-Summer-tacular\'',
-      'Loves her \'banana yellow\' pant-suit',
-      'Lives behind the gates of Western Estates'
+      'Wears a \'banana yellow\' pant-suit',
+      'Lives in Western Estates'
     ],
     friends: [
       {
@@ -911,7 +911,7 @@ var users = [
     about: [
       'Intern on The Phil Hendrie Show',
       'Drove his Harley into an oak tree',
-      'Hosts \'Bud\'s Radical NASCAR crashes\'',
+      'Hosts \'Radical NASCAR crashes\'',
       'Lives in Ojai, CA'
     ],
     friends: [
@@ -1280,7 +1280,7 @@ var users = [
     id: 8,
     name: 'david hall',
     about: [
-      'Highly successful Program Manager',
+      'Very successful Program Manager',
       'AKA \'Darth Hall\'',
       'Enjoys bubble baths',
       'Lives in Beverly Hills, CA'
@@ -1490,7 +1490,7 @@ var users = [
     name: 'dean wheeler',
     about: [
       'Middle-aged hippie',
-      'From \'The Northern California Hoalistic Center\'',
+      'From \'The Norco Hoalistic Center\'',
       'Wife is Esmarelda',
       'Lives in Hill Valley, CA'
     ],
@@ -1616,7 +1616,7 @@ var users = [
     about: [
       'Retired attorney',
       'Hosts \'Senior Chat\'',
-      'Once attacked by a cabbage patch doll',
+      'Once attacked by cabbage patch',
       'Lives in Moreno Valley, CA'
     ],
     friends: [
@@ -1781,9 +1781,9 @@ var users = [
     id: 11,
     name: 'jay santos',
     about: [
-      'SubCommander of Citizens Auxilery Police',
-      'Reports to Major Elvis Newton',
-      'Pith Helmit and blue armband uniform',
+      'In the Citizens Auxilery Police',
+      'Current rank of SubCommander',
+      'Wears pith helmit & blue armband',
       'Location undisclosed'
     ],
     friends: [
@@ -2347,10 +2347,10 @@ var users = [
     id: 14,
     name: 'ted bell',
     about: [
-      'Owner of Ted\'s of Beverly Hills Steak House',
-      'Was first to wrap  a baked potato in tinfoil',
-      'Invented the Rum and Coke...calls it a \'Ted\'',
-      'Lives in a huge house in Beverly Hills'
+      'Owner of Ted\'s of Beverly Hills',
+      'Invented the steak knife',
+      'Invented the Rum and Coke',
+      'Lives in Beverly Hills, CA'
     ],
     friends: [
       {
