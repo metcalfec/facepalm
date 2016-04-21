@@ -137,7 +137,7 @@ app.post('/add-friend/', jsonParser, function(req, res) {
       res.json({targetClick: 'Photos', profile: friend, photos: friendPhotos, friends: false, activeUser: false});
     }
   }
-  else if (req.body.text === 'Kill Friend') {
+  else if (req.body.text === 'Palm Friend') {
     for (var i = 0; i < friendInQuestion.friends.length; i++) {
       if (friendInQuestion.friends[i].name === activeUser.name) {
         friendInQuestion.friends.splice(i, 1);

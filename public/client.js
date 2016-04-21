@@ -198,7 +198,7 @@ jumbo.addEventListener('click', function(event) {
       friends.className = 'col-xs-5 col-sm-5 col-md-4 buffer';
       showFriends(responseObject.targetFriends);
       if (unfriend[1].textContent === 'Add Friend') {
-        unfriend[1].textContent = 'Kill Friend';
+        unfriend[1].textContent = 'Palm Friend';
         unfriend[1].className = 'btn btn-danger add-remove';
       }
       else {
@@ -389,7 +389,7 @@ function showJumbo(matched, active) {
       }
     }
     if (myFriend) {
-      add.textContent = 'Kill Friend';
+      add.textContent = 'Palm Friend';
       add.setAttribute('class', 'btn btn-danger add-remove');
     }
     else {
