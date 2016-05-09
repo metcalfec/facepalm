@@ -1,7 +1,7 @@
 # facepalm
-A distant cousin to facebook.
+A Facebook inspired social web app.
 
-https://young-sands-94400.herokuapp.com/
+https://facepalm.herokuapp.com/
 
 For my second project, I created a Single-Page Web Application clone of Facebook called Facepalm. The apps functionality is as follows:
 <ul>
@@ -14,4 +14,4 @@ For my second project, I created a Single-Page Web Application clone of Facebook
   <li>Lastly, users can view pictures of a particular user.</li>
 </ul>
 
-<img src="https://cloud.githubusercontent.com/assets/17256216/14568095/3fd31b78-02ec-11e6-824b-aeaf08862ca7.png" width="90%"></img> <img src="https://cloud.githubusercontent.com/assets/17256216/14568087/3a73f1de-02ec-11e6-923b-5d9677821508.png" width="90%"></img> 
+<img src="https://cloud.githubusercontent.com/assets/17256216/14568095/3fd31b78-02ec-11e6-824b-aeaf08862ca7.png" width="90%"></img> <img src="https://cloud.githubusercontent.com/assets/17256216/14568087/3a73f1de-02ec-11e6-923b-5d9677821508.png" width="90%"></img>
